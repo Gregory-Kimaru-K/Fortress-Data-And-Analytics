@@ -1,0 +1,131 @@
+{% extends "base.html" %}
+{% block content %}
+{% include 'nav.html' %}
+<div class="about-head">
+    <h1>
+        About Us
+    </h1>
+</div>
+<div class="about-team">
+    <div class="about-list">
+        <div class="team">
+            <img src="{{ url_for('static', filename='about/ceo.png') }}"/>
+            <div class="intro">
+                <div class="team-content">
+                    <div class="title">
+                        <h2>
+                            Our Ceo
+                        </h2>
+                    </div>
+                    <div class="des">
+                        <p>
+                            CPA (k), B.Com, BBIT, Bsc - Software Engineering, Certified Sage Evolution Consultant and 11+ years’ experience in implementing financial management systems, Practical experience in working with Manufacturing, Sales and Distribution Industries.
+                        </p>
+                    </div>
+                    <div class="get-started">
+                        <button><a href="{{ url_for('contact') }}">Get Started</a></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="team">
+            <img src="{{ url_for('static', filename='about/team.png') }}"/>
+           <div class="intro">
+            <div class="team-content">
+                <div class="title">
+                    <h2>
+                        Our Team
+                    </h2>
+                </div>
+                <div class="des">
+                    <p>
+                        Collaborative minds driving data excellence. Our diverse team synergizes analytics prowess, transforming raw data into actionable insights. Together, we redefine possibilities in the data landscape.
+                    </p>
+                </div>
+                <div class="get-started">
+                    <button><a href="{{ url_for('contact') }}">Get Started</a></button>
+                </div>
+            </div>
+           </div>
+        </div>
+    </div>
+    <div class="team-arrow">
+        <button id="team-prev"><</button>
+        <button id="team-next">></button>
+    </div>
+</div>
+
+
+<!--About team-->
+<script>
+    let nextButton = document.getElementById('team-next');
+    let prevButton = document.getElementById('team-prev');
+    let carousel = document.querySelector('.about-team');
+    let listHTML = document.querySelector('.about-team .about-list');
+
+    nextButton.onclick = function() {
+        showSlider('team-next');
+    }
+    prevButton.onclick = function() {
+        showSlider('team-prev');
+    }
+
+    let unAcceptClick;
+    const showSlider = (type) => {
+        nextButton.style.pointerEvents = 'none';
+        prevButton.style.pointerEvents = 'none';
+
+        carousel.classList.remove('team-prev', 'team-next');
+        let items = document.querySelectorAll('.about-team .about-list .team');
+        if(type === 'team-next'){
+            listHTML.appendChild(items[0]);
+            carousel.classList.add('team-next');
+        }
+        else {
+            let positionlast = items.length - 1;
+            listHTML.prepend(items[positionlast]);
+            carousel.classList.add('team-prev');
+        }
+
+        clearTimeout(unAcceptClick);
+        unAcceptClick = setTimeout(() => {
+            nextButton.style.pointerEvents = 'auto';
+            prevButton.style.pointerEvents = 'auto';
+        }, 2000);
+    }
+</script>
+<!--Slides fuction-->
+<script>
+    let counter = 1;
+    let intervalId;
+
+    function startAutomaticSlide() {
+        intervalId = setInterval(function () {
+            document.getElementById('radio' + counter).checked = true;
+            counter++;
+            if (counter > 7) {
+                counter = 1;
+            }
+        }, 5000);
+    }
+
+    function stopAutomaticSlide() {
+        clearInterval(intervalId);
+        intervalId = null; // Reset intervalId
+    }
+
+    // Start automatic slide change initially
+    startAutomaticSlide();
+
+    // Toggle automatic slide change on button click
+    document.querySelector('.navigation-manual').addEventListener('click', function () {
+        if (intervalId) {
+            // If intervalId is set, automatic slide change is active, so stop it
+            stopAutomaticSlide();
+        } else {
+            // If intervalId is not set, automatic slide change is not active, so start it
+            startAutomaticSlide();
+        }
+    });
+</script>
+{% endblock %}

@@ -1,0 +1,88 @@
+.cont-head {
+    padding-top: 80px;
+    text-align: center;
+    color: #0047ab; /* Blue color */
+}
+
+.contact {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.contact-options {
+    margin-top: 3%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.contact-options a {
+    position: relative;
+    left: -5%;
+    margin-left: 10%;
+
+}
+
+.contact-options img {
+    margin-top: 10%;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #f0f0f0;
+    transition: transform 1s ease;
+}
+
+.contact-options img:hover {
+    transform: scale(1.1);
+}
+
+.form {
+    align-content: center;
+    margin-top: 5%;
+}
+
+.cont_form {
+    background: #f0f0f0;
+    position: relative;
+    width: 50%;
+    padding: 20px;
+    left: 25%;
+    margin-top: 5%;
+    border-radius: 10px;
+    margin-bottom: 10%;
+}
+
+.cont_form input,
+.cont_form textarea {
+    margin-top: 10px;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.cont_form textarea {
+    resize: vertical;
+}
+
+.sub input[type="submit"] {
+    background-color: #0047ab;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 1s ease;
+}
+
+.sub input[type="submit"]:hover {
+    background-color: #003374; /* Darker shade of blue on hover */
+}
+
+@media screen and (max-width:800px) {
+    .form .cont_form {
+        width:80%;
+        left: 7%;
+    }
+}

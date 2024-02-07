@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% block content %}
+{% include 'nav.html' %}
+<main class="contact_page">
+    <div class="cont-head">
+        <h2>Contact Us</h2>
+        <p>
+            Thank you for your interest in our services and business solutions. Share your requirements and ideas with us and get all your questions answered by our experts. Please fill out this form, and our representative will get back to you shortly. We are here to help you accelerate digital transformation and drive innovation.
+        </p>
+    </div>
+    <div class="flex">
+        <div class="contact">
+            <h2>Lets discuss the project</h2>
+            <div class="contact-options">
+                <a href="tel:0722530651"><img src="{{ url_for('static', filename='phone.png') }}" alt=""></a>
+                <a href="https://wa.me/+25497245933"><img src="{{ url_for('static', filename='whatsapp.png') }}" alt=""></a>
+                <a href="mailto:your-email@gmail.com"><img src="{{ url_for('static', filename='email.png') }}" alt=""></a>
+            </div>
+            <div class="form">
+                <h3>Your Message</h3>
+                <div class="cont_form">
+                    <form method="post" action="/sending">
+                        <input type="text" name="customer_name" placeholder="Name" required><br>
+                        <input type="email" name="email" placeholder="Email" required><br>
+                        <input type="tel" name="customer_contact" placeholder="Contact No" required><br>
+                        <input type="text" name="topic" placeholder="Enter Your Topic" required><br>
+                        <textarea name="brief" rows="5" placeholder="Requirement Brief" required></textarea><br>
+                        <div class="sub">
+                            <input type="submit" value="Submit">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</main>
+{% endblock content %}

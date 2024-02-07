@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="shortcut icon" type="x-icon" href="{{ url_for('static', filename='fortress2.png') }}" />
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}"/>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='landing.css') }}" />
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='services.css') }}" />
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='tech.css') }}" />
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='contact.css') }}" />
+</head>
+<body id="base-body">
+    <div id="preloader"></div>
+    {% include 'nav.html' %}
+    {% block content %}
+    {% endblock %}
+    <div class="message-icon" onclick="togglePopup()"><img src="{{ url_for('static', filename='message.png') }}" alt=""></div>
+    <div class="popup" id="popup">
+        <div class="popup-content">
+            <span class="close-btn" onclick="togglePopup()">&times;</span>
+            <h2>Contact Us</h2>
+            <form method="post" action="/sending">
+                <input type="text" name="customer_name" placeholder="Name" required><br>
+                <input type="email" name="email" placeholder="Email" required><br>
+                <input type="tel" name="customer_contact" placeholder="Contact No" required><br>
+                <input type="text" name="topic" placeholder="Enter You Topic" required><br>
+                <textarea name="brief" rows="10" cols="30" placeholder="Requirement Brief" required></textarea><br>
+
+                <div class="sub">
+                    <input type="submit" value="submit">
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="services">
+            <h2>Services</h2>
+            <ul>
+                <li>
+                    <a href="{{ url_for('tech_cosultance')}}">Technology Consulting</a>
+                </li>
+
+                <li>
+                    <a href="{{ url_for('bsintel')}}">Bussiness Inteligence</a>
+                </li>
+
+                <li>
+                    <a href="{{ url_for('customsoftware')}}">Custom Software Development</a> 
+                </li>
+
+                <li>
+                    <a href="{{ url_for('datawarehousing')}}">Data Warehousing</a>  
+                </li>
+
+                <li>
+                    <a href="{{ url_for('datawarehousing')}}">Data Warehousing</a>     
+                </li>
+
+                <li>
+                    <a href="{{ url_for('webdev')}}">Web Development</a>
+                </li>
+
+                <li>
+                    <a href="{{ url_for('product')}}">Product Engineering</a>
+                </li>
+
+                <li>
+                    <a href="{{ url_for('softwaretesting')}}">Software Testing</a>
+                </li>
+
+                <li>
+                    <a href="{{ url_for('mobileapp')}}">Moblie App Development</a> 
+                </li>
+
+                <li>
+                    <a href="{{ url_for('datavisualzation')}}">Data Visualization</a>  
+                </li>
+
+                <li>
+                    <a href="{{ url_for('datascience')}}">Data Science</a>   
+                </li>
+
+                <li>
+                    <a href="{{ url_for('iot')}}">Internet Of Things</a>
+                </li>
+            </ul>
+        </div>
+        <div class="company">
+            <h2>Company</h2>
+            <ul>
+                <li><a href="{{ url_for('contact') }}">Contact us</a></li>
+                <li> <a href="{[ url_for('team') ]}">Our team</a></li>
+                <li> <a href="{[ url_for('privacypolicy') ]}">Privacy Policy</a></li>
+            </ul>
+        </div>
+        <div class="contactus">
+            <h2>Contact Us</h2>
+            <ul>
+                <li><a href="{{ url_for('contact') }}">Send us a Message</a></li>
+                <li>
+                    <label for="phone">Phone:</label>
+                    <a href="tel:+254722530651">+254 722530651</a> or <br>
+                    <a href="tel:+254723991758">+254 723991758</a>
+                <li>
+                    <label for="gmail">Email:</label>
+                    <a href="mailto:info@fortress.co.ke">info@fortress.co.ke</a>
+
+                </li>
+            </ul>
+        </div>
+        <div class="location">
+            <h2>Location</h2>
+            <ul>
+                <li>
+                    <p>
+                        Outer Ring Road, Off Thika Road, Ruaraka,
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        P.O. Box 5926-00200 Nairobi, Kenya ,
+                    </p>
+                </li>
+            </ul>
+        </div>
+        <!-- <div class="other-links">
+            <ul>
+                <li><a href="">Privacy Policy</a></li>
+                <li><a href=""><img src="{{ url_for('static', filename='other_links/facebook.png') }}" alt=""></a></li>
+                <li><a href=""><img src="{{ url_for('static', filename='other_links/x.png') }}" alt=""></a></li>
+                <li><a href=""><img src="{{ url_for('static', filename='other_links/linkedin.png') }}" alt=""></a></li>
+                <li><a href=""><img src="{{ url_for('static', filename='other_links/instagram.png') }}" alt=""></a></li>
+
+            </ul>
+        </div> -->
+        <div class="lowest">
+            <p>Copyright @2024 Fortress Data and Analytics. All rights reserved</p>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='main.js') }}"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+    <script>
+        var loader = document.getElementById('preloader');
+        window.addEventListener('load', function() {
+            loader.style.display = 'none';
+        })
+    </script>
+   <script>
+   function togglePopup() {
+    const popup = document.getElementById('popup');
+    if (popup.style.display === 'none' || popup.style.display === '') {
+        popup.style.opacity = '0'; // Set initial opacity to 0
+        popup.style.display = 'block';
+        setTimeout(() => {
+            popup.style.opacity = '1'; // Fade in the popup
+        }, 10); // Delay to allow display change to take effect
+    } else {
+        popup.style.opacity = '0'; // Fade out the popup
+        setTimeout(() => {
+            popup.style.display = 'none';
+        }, 500); // Wait for transition to complete before hiding
+    }
+}
+</script>
+
+    <script>
+        $(document).ready(function() {
+            $('#myForm').submit(function(event) {
+                event.preventDefault(); // Prevent the default form submission
+                $.ajax({
+                    type: 'POST',
+                    url: '/sending',
+                    data: $(this).serialize(),
+                    success: function(response) {
+                        alert(response.message); // Show a JavaScript alert with the success message
+                    },
+                    error: function(xhr, status, error) {
+                        console.error('Error:', error);
+                        // Handle error if needed
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
+

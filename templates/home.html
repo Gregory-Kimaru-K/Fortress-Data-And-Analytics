@@ -1,0 +1,625 @@
+{% extends 'base.html' %}
+{% block content %}
+<main>
+    <div class="carousel parallax-section">
+        <h1>Fortress Data And Analytics</h1>
+        <h2>Our Services</h2>
+        <div class="list">
+            <div class="item">
+                <img src="{{ url_for('static', filename='landing/data_science.png') }}" />
+                <div class="intro">
+                    <div class="title">
+                        <h2>Technology Consulting</h2>
+                    </div>
+                    <div class="des">
+                        <p> Propel your organization forward with expert guidance and strategic insights from Fortress Data And Analytics. Leverage cutting-edge technologies to drive innovation, optimize processes, and achieve your business objectives.</p>
+                    </div>
+                    <div class="seeMore">
+                        <button>see more</button>
+                    </div>
+                </div>
+                <div class="detail">
+                    <div class="title">
+                        <h2>Technology Consulting</h2>
+                    </div>
+                    <div class="des">
+                        <p>Our technology consulting services encompass a wide range of expertise, including IT strategy development, digital transformation, cloud computing, cybersecurity, and more. We collaborate closely with clients to identify opportunities, mitigate risks, and implement tailored technology solutions that deliver tangible business value.</p>
+                    </div>
+                    <div class="getintouch">
+                        <button><a href="{{ url_for('tech_cosultance') }}">See Details</a></button>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <img src="{{ url_for('static', filename='landing/bs_intel.png') }}" />
+                <div class="intro">
+                    <div class="title">
+                        <h2>Bussiness Itelligence</h2>
+                    </div>
+                    <div class="des">
+                        <p>Build a culture of data literacy with powerful business intelligence and analytics services from Fortress Data And Analytics to gain new insights, reshape business models, increase efficiency, and become more data-driven. Our wide-ranging business intelligence services help organizations transform data into actionable insights for accurate, strategic, and tactical business decisions.</p>
+                    </div>
+                    <div class="seeMore">
+                        <button>see more</button>
+                    </div>
+                </div>
+                <div class="detail">
+                    <div class="title">
+                        <h2>Bussiness Itelligence</h2>
+                    </div>
+                    <div class="des">
+                        <p>We offer a comprehensive suite of business intelligence and analytics services that help growing organizations drive data literacy and unleash the power of data to be ready for a data-driven tomorrow. such as Data Visualization Services, Enterprise Business Intelligence, BI Consulting and Business Analytics Services</p>
+                    </div>
+                    <div class="techno">
+                        <div>
+                            <p>Data Visualization</p>
+                            <p>Enterprise BI</p>
+                            <p>Business Analytics</p>
+                            <p>BI Consulting</p>
+                        </div>
+                    </div>
+                    <div class="getintouch">
+                        <button><a href="{{ url_for('bsintel') }}">See Details</a></button>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <img src="{{ url_for('static', filename='landing/IOT.png') }}" />
+                <div class="intro">
+                    <div class="title">
+                        <h2>Product Engineering</h2>
+                    </div>
+                    <div class="des">
+                        <p>Bring your product ideas to life with comprehensive product engineering services from Fortress Data And Analytics. From concept to launch, we help you design, develop, and deliver innovative products that exceed customer expectations.</p>
+                    </div>
+                    <div class="seeMore">
+                        <button>see more</button>
+                    </div>
+                </div>
+                <div class="detail">
+                    <div class="title">
+                        <h2>Product Engineering</h2>
+                    </div>
+                    <div class="des">
+                        <p>Our product engineering team specializes in agile product development methodologies, rapid prototyping, user-centered design, and quality assurance. We provide end-to-end support across the product lifecycle, including requirements analysis, UI/UX design, software development, testing, and maintenance</p>
+                    </div>
+                    <div class="getintouch">
+                        <button><a href="{{ url_for('product') }}">Get In Touch</a></button>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <img src="{{ url_for('static', filename='landing/landing_visual.png') }}" />
+                <div class="intro">
+                    <div class="title">
+                        <h2>Data Visualization</h2>
+                    </div>
+                    <div class="des">
+                        <p>Transform complex data into intuitive visualizations with Fortress Data And Analytics. Communicate insights effectively, foster data-driven decision-making, and drive business growth.</p>
+                    </div>
+                    <div class="seeMore">
+                        <button>see more</button>
+                    </div>
+                </div>
+                <div class="detail">
+                    <div class="title">
+                        <h2>Data Visualization</h2>
+                    </div>
+                    <div class="des">
+                        <p>Our data visualization services focus on creating interactive and visually appealing dashboards, reports, and infographics. We leverage cutting-edge tools and techniques to present data in meaningful and actionable ways.</p>
+                    </div>
+                    <div class="techno">
+                        <div>
+                            <p>Power BI</p>
+                            <p>Tableau</p>
+                            <p>Plotly</p>
+                        </div>
+                    </div>
+                    <div class="getintouch">
+                        <button><a href="{{ url_for('datavisualzation') }}">See Details</a></button>
+                    </div>
+                </div>
+            </div> 
+            <div class="item">
+                <img src="{{ url_for('static', filename='landing/data_warehouse.png') }}" />
+                <div class="intro">
+                    <div class="title">
+                        <h2>Data Warehousing</h2>
+                    </div>
+                    <div class="des">
+                        <p>Streamline data management and optimize performance with data warehousing solutions from Fortress Data And Analytics. Centralize data storage, improve accessibility, and enable advanced analytics.</p>
+                    </div>
+                    <div class="seeMore">
+                        <button>see more</button>
+                    </div>
+                </div>
+                <div class="detail">
+                    <div class="title">
+                        <h2>Data Warehousing</h2>
+                    </div>
+                    <div class="des">
+                        <p>Our data warehousing services include designing, implementing, and managing data warehouse solutions tailored to your organization's needs. We ensure data integrity, scalability, and security while facilitating data-driven insights and decision-making</p>
+                    </div>
+                    <div class="techno">
+                        <div>
+                            <p>Amazon Redshift</p>
+                            <p>Microsoft Azure SQL Data </p>
+                            <p>Snowflake</p>
+                        </div>
+                    </div>
+                    <div class="getintouch">
+                        <button><a href="{{ url_for('datawarehousing') }}">See Details</a></button>
+                    </div>
+                </div>
+            </div>         
+        </div>
+        <div class="arrows">
+            <button id="prev"><</button>
+            <button id="back">Go Back &#8599</button>
+            <button id="next">></button>
+        </div>
+    </div>
+    <div class="some-about parallax-section">
+        <div class="heading">
+            <h2>Pioneering Precision in Advanced Data Analytics Solutions</h2>
+        </div>
+        <div class="content">
+            <p>We specialize in leveraging advanced technologies for business transformation, delivering tailored, resilient, and secure software solutions. Our customized approach reinvents business models, accelerates innovation, and strategically plans digital growth, fostering business agility."</p>
+        </div>
+    </div>
+    <div class="technologies parallax-section">
+        <h2>Technologies</h2>
+        <div class="buttons">
+            <button onclick="showContent('language')" data-tech="language">Backend</button>
+            <button onclick="showContent('big-data')" data-tech="big-data">Frontend</button>
+            <button onclick="showContent('ml-ai')" data-tech="ml-ai">Mobile Technologies</button>
+            <button onclick="showContent('visual')" data-tech="visual">Business Analytics</button>
+            <button onclick="showContent('cloud-warehousing')" data-tech="cloud-warehousing">Cloud Warehousing</button>
+            <!-- <button onclick="showContent('kubernetes')" data-tech="kubernetes">Kubernetes</button> -->
+            <button onclick="showContent('iot')" data-tech="iot">IOT</button>
+        </div>
+        <div class="tech-content" id="tech-content">
+            <div class="language technology">
+                <div class="tech-heading">
+                    <h3>
+                        Backend Technologies
+                    </h3>
+                </div>
+                <div class="tech-images">
+                    <img src="{{ url_for('static', filename='tech/backend.jpg') }}">
+                </div>
+                <div class="tech-des">
+                    <p>
+                        Backend development involves building and maintaining the server-side logic and databases that power web applications. It includes managing user authentication, database interactions, and server configurations.                    </p>
+                    <button>
+                        <a href="{{ url_for('backend') }}">See More</a>
+                    </button>
+                </div>
+            </div>
+            <div class="big-data technology">
+                <div class="tech-heading">
+                    <h3>
+                        Frontend
+                    </h3>
+                </div>
+                <div class="tech-images">
+                    <img src="{{ url_for('static', filename='tech/frontend.jpg') }}">
+                </div>
+                <div class="tech-des">
+                    <p>
+                        Frontend development focuses on creating the user interface and experience of web applications. It involves designing and implementing features that users interact with directly.                    </p>
+                    <button>
+                        <a href="{{ url_for('frontend') }}">See More</a>
+                    </button>
+                </div>
+            </div>
+            <div class="ml-ai technology">
+                <div class="tech-heading">
+                    <h3>
+                        Mobile Technologies
+                    </h3>
+                </div>
+                <div class="tech-images">
+                    <img src="{{ url_for('static', filename='tech/mobile.png') }}">
+                </div>
+                <div class="tech-des">
+                    <p>
+                        Mobile technologies focus on developing applications for mobile devices such as smartphones and tablets. It includes both native and cross-platform development approaches.                    <button>
+                        <a href="{{ url_for('mobile') }}">See More</a>
+                    </button>
+                </div>
+            </div>
+            <div class="visual technology">
+                <div class="tech-heading">
+                    <h3>
+                        Bussiness Analytics
+                    </h3>
+                </div>
+                <div class="tech-images">
+                    <img src="{{ url_for('static', filename='tech/landing_visual.png') }}">
+                </div>
+                <div class="tech-des">
+                    <p>
+                        Business analytics involves analyzing data to gain insights that drive business decisions and strategies. It encompasses data mining, predictive analytics, descriptive analytics, and prescriptive analytics.                    </p>
+                    <button>
+                        <a href="{{ url_for('bianalytics') }}">See More</a>
+                    </button>
+                </div>
+            </div>
+            <div class="cloud-warehousing technology">
+                <div class="tech-heading">
+                    <h3>
+                        Cloud Warehousing
+                    </h3>
+                </div>
+                <div class="tech-images">
+                    <img src="{{ url_for('static', filename='tech/data_warehouse.png') }}">
+                </div>
+                <div class="tech-des">
+                    <p>
+                        Cloud data warehousing solutions (e.g., Amazon Redshift, Google BigQuery) provide a scalable and flexible environment for storing and analyzing data in the cloud. This technology offers agility, cost-effectiveness, and accessibility for analytics tasks.
+                    </p>
+                    <button>
+                        <a href="{{ url_for('cloud') }}">See More</a>
+                    </button>
+                </div>
+            </div>
+            <!-- <div class="kubernetes technology">
+                <div class="tech-heading">
+                    <h3>
+                        Kubernetes
+                    </h3>
+                </div>
+                <div class="tech-images">
+                <img src="{{ url_for('static', filename='tech/kubernetes.png') }}">
+                </div>
+                <div class="tech-des">
+                    <p>
+                        Kubernetes is a container orchestration platform that automates the deployment, scaling, and management of containerized applications. In analytics, Kubernetes enhances efficiency by simplifying the deployment and scaling of data processing and analytics applications.
+                    </p>
+                </div>
+            </div> -->
+            <div class="iot technology">
+                <div class="tech-heading">
+                    <h3>
+                        Internet Of Things.
+                    </h3>
+                </div>
+                <div class="tech-images">
+                    <img src="{{ url_for('static', filename='tech/IOT.png') }}">
+                </div>
+                <div class="tech-des">
+                    <p>
+                        IoT involves connecting devices to the internet to collect and exchange data. In analytics, IoT generates vast datasets that, when analyzed, offer insights into user behavior, device performance, and enable predictive maintenance, among other applications.
+                    </p>
+                    <button>
+                        <a href="{{ url_for('trending') }}">See More</a>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bs-sol-head parallax-section">
+        <h1>
+            Industries We Serve.
+        </h1>
+    </div>
+    <div class="aligning">
+        <div class="bussiness-sol parallax-section">
+            <div class="slides">
+                <input type="radio" name="radio-btn" id="radio1">
+                <input type="radio" name="radio-btn" id="radio2">
+                <input type="radio" name="radio-btn" id="radio3">
+                <input type="radio" name="radio-btn" id="radio4">
+                <input type="radio" name="radio-btn" id="radio5">
+                <input type="radio" name="radio-btn" id="radio6">
+                <input type="radio" name="radio-btn" id="radio7">
+    
+                <div class="manufacturing slide first">
+                    <div class="image">
+                        <div class="man-img">
+                            <img src="{{ url_for('static', filename='industries/manufacturing.jpg') }}" width="400" />
+                        </div>
+                        <div class="man-content">
+                            <h3>Manufacturing</h3>
+                            <strong>Predictive Maintenance: </strong>
+                            <p>Use analytics to predict equipment failures and optimize maintenance schedules, reducing downtime.</p>
+                            <strong>Quality Control: </strong>
+                            <p>Analyze production data to identify defects, improve quality control, and enhance overall product quality.</p>
+                            <strong>Supply Chain Optimization: </strong>
+                            <p>Optimize inventory management, streamline supply chains, and improve overall operational efficiency.</p>            
+                        </div>
+                    </div>
+                </div>
+                <div class="healthcare slide">
+                    <div class="image">
+                        <div class="hea-img">
+                            <img src="{{ url_for('static', filename='industries/healthcare.png') }}" width="400" />
+                        </div>
+                        <div class="hea-content">
+                            <h3>Healthcare</h3>
+                            <strong>Predictive Analytics for Patient Outcomes: </strong>
+                            <p>Predict patient outcomes and identify potential health issues through data analysis of patient records.</p>
+                            <strong>Fraud Detection: </strong>
+                            <p>Use analytics to identify fraudulent activities in healthcare insurance claims.</p>
+                            <strong>Clinical Research: </strong> 
+                            <p>Analyze large datasets to identify trends, patterns, and potential breakthroughs in medical research.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="automobile slide">
+                    <div class="image">
+                        <div class="auto-img">
+                            <img src="{{ url_for('static', filename='industries/automobile.jpg') }}" width="400" />
+                        </div>
+                        <div class="auto-content">
+                            <h3>Automotive</h3>
+                            <strong>Predictive Maintenance for Vehicles: </strong>
+                            <p> Predict maintenance needs for vehicles based on sensor data, reducing unexpected breakdowns.</p>
+                            <strong>Supply Chain Optimization: </strong>
+                            <p>Optimize the automotive supply chain for improved efficiency and cost-effectiveness.</p>
+                            <strong>Customer Insights: </strong> 
+                            <p>Analyze customer data for insights into preferences, buying behavior, and satisfaction.</p>           
+                        </div>
+                    </div>
+                </div>
+                <div class="banking slide">
+                    <div class="image">
+                        <div class="bank-img">
+                            <img src="{{ url_for('static', filename='industries/banking.jpg') }}" width="400" />
+                        </div>
+                        <div class="bank-content">
+                            <h3>Banking</h3>
+                            <strong>Fraud Detection: </strong>
+                            <p> Use analytics to detect and prevent fraudulent transactions and activities.</p>
+                            <strong>Credit Scoring: </strong>
+                            <p>Assess credit risk by analyzing customer data to make informed lending decisions.</p>
+                            <strong>Customer Segmentation: </strong> 
+                            <p>Analyze customer behavior to create targeted marketing strategies and personalized banking experiences.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="logistics slide">
+                    <div class="image">
+                        <div class="logi-img">
+                            <img src="{{ url_for('static', filename='industries/logistics.jpg') }}" width="400" />
+                        </div>
+                        <div class="logi-content">
+                            <h3>Logistics</h3>
+                            <strong>Route Optimization: </strong>
+                            <p>Optimize delivery routes and schedules for logistics companies to improve efficiency.</p>
+                            <strong>Inventory Management: </strong>
+                            <p>Use analytics to manage and optimize inventory levels, reducing carrying costs.</p>
+                            <strong>Demand Forecasting: </strong> 
+                            <p>Predict demand patterns to optimize supply chain processes.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="insurance slide">
+                    <div class="image">
+                        <div class="insure-img">
+                            <img src="{{ url_for('static', filename='industries/insurance.jpg') }}" width="400" />
+                        </div>
+                        <div class="insure-content">
+                            <h3>Insurance</h3>
+                            <strong>Underwriting: </strong>
+                            <p>Use data analytics to assess risk and determine insurance premiums.</p>
+                            <strong>Claims Processing: </strong>
+                            <p>Streamline claims processing through data analysis, reducing fraud and improving efficiency..</p>
+                            <strong>Customer Segmentation: </strong> 
+                            <p>Analyze customer data to create targeted insurance products and marketing strategies.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="capital-markets slide">
+                    <div class="image">
+                        <div class="capital-img">
+                            <img src="{{ url_for('static', filename='industries/capital_markets.jpg') }}" width="400"/>
+                        </div>
+                        <div class="capital-content">
+                            <h3>Capital Markets</h3>
+                            <strong>Algorithmic Trading: </strong>
+                            <p>Use algorithms and data analysis to make high-frequency trading decisions.</p>
+                            <strong>Risk Management: </strong>
+                            <p>Analyze market and portfolio data to assess and manage investment risks.</p>
+                            <strong>Market Forecasting: </strong> 
+                            <p>Utilize data analytics to predict market trends and make informed investment decisions.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="navigation-auto">
+                    <div class="auto-btn1"></div>
+                    <div class="auto-btn2"></div>
+                    <div class="auto-btn3"></div>
+                    <div class="auto-btn4"></div>
+                    <div class="auto-btn5"></div>
+                    <div class="auto-btn6"></div>
+                    <div class="auto-btn7"></div>
+                </div>
+            </div>
+            <div class="navigation-manual">
+                <label for="radio1" class="manual-btn"></label>
+                <label for="radio2" class="manual-btn"></label>
+                <label for="radio3" class="manual-btn"></label>
+                <label for="radio4" class="manual-btn"></label>
+                <label for="radio5" class="manual-btn"></label>
+                <label for="radio6" class="manual-btn"></label>
+                <label for="radio7" class="manual-btn"></label>
+    
+            </div> 
+        </div>
+    </div>
+    
+    <!-- <div class="process">
+        <h1>
+            Our 
+        </h1>
+        <div class="goal">
+            <div class="process-head">
+                <h2>
+                    What is your goal.
+                </h2>
+            </div>
+            <div class="process-cont">
+                <p>
+                    We first assess why and for what reason you want to 
+                </p>
+            </div>
+        </div>
+        <div class="collect-cleaning">2</div>
+        <div class="eda">3</div>
+        <div class="model">4</div>
+        <div class="visualization">5</div>
+        <div class="implement">6</div>
+    </div> -->
+</main>
+<!--Navbar color-->
+<script>
+    function changeBgNav(){
+        let navbar = document.querySelector('.header');
+        let scrollValue = window.scrollY;
+        if(scrollValue < 150){
+            navbar.classList.remove('bgColor');
+        }
+        else{
+            navbar.classList.add('bgColor');
+        }
+    }
+
+    window.addEventListener('scroll', changeBgNav);
+
+</script>
+<!--landing carousel-->
+<script>
+    let nextButton = document.getElementById('next');
+    let prevButton = document.getElementById('prev');
+    let backButton = document.getElementById('back');
+    let seeMoreButtons = document.querySelectorAll('.seeMore');
+    let carousel = document.querySelector('.carousel');
+    let listHTML = document.querySelector('.carousel .list');
+
+    nextButton.onclick = function() {
+        showSlider('next');
+    }
+    prevButton.onclick = function() {
+        showSlider('prev');
+    }
+
+    let unAcceptClick;
+    const showSlider = (type) => {
+        nextButton.style.pointerEvents = 'none';
+        prevButton.style.pointerEvents = 'none';
+
+        carousel.classList.remove('prev', 'next');
+        let items = document.querySelectorAll('.carousel .list .item');
+        if(type === 'next'){
+            listHTML.appendChild(items[0]);
+            carousel.classList.add('next');
+        }
+        else {
+            let positionlast = items.length - 1;
+            listHTML.prepend(items[positionlast]);
+            carousel.classList.add('prev');
+        }
+
+        clearTimeout(unAcceptClick);
+        unAcceptClick = setTimeout(() => {
+            nextButton.style.pointerEvents = 'auto';
+            prevButton.style.pointerEvents = 'auto';
+        }, 2000);
+    }
+
+    seeMoreButtons.forEach(button => {
+        button.onclick = function() {
+            carousel.classList.add('showDetail');
+        }
+    })
+    
+    backButton.onclick = function() {
+        carousel.classList.remove('showDetail')
+    }
+</script>
+
+<!--Technologies-->
+<script>
+    window.onload = function () {
+        showContent('language');
+    };
+
+    function showContent(tech) {
+        // Get all technology elements
+        var technologies = document.querySelectorAll('.technology');
+
+        // Hide all technology content except the selected one
+        technologies.forEach(function (el) {
+            if (el.classList.contains(tech)) {
+                el.style.display = 'block';
+            } else {
+                el.style.display = 'none';
+            }
+        });
+
+        // Remove 'active' class from all buttons
+        var buttons = document.querySelectorAll('.buttons button');
+        buttons.forEach(function (button) {
+            button.classList.remove('active');
+        });
+
+        // Add 'active' class to the clicked button
+        var clickedButton = document.querySelector('.buttons button[data-tech="' + tech + '"]');
+        clickedButton.classList.add('active');
+    }
+  </script>
+
+<!--Slides fuction-->
+<script>
+    let counter = 1;
+    let intervalId;
+
+    function startAutomaticSlide() {
+        intervalId = setInterval(function () {
+            document.getElementById('radio' + counter).checked = true;
+            counter++;
+            if (counter > 7) {
+                counter = 1;
+            }
+        }, 5000);
+    }
+
+    function stopAutomaticSlide() {
+        clearInterval(intervalId);
+        intervalId = null; // Reset intervalId
+    }
+
+    // Start automatic slide change initially
+    startAutomaticSlide();
+
+    // Toggle automatic slide change on button click
+    document.querySelector('.navigation-manual').addEventListener('click', function () {
+        if (intervalId) {
+            // If intervalId is set, automatic slide change is active, so stop it
+            stopAutomaticSlide();
+        } else {
+            // If intervalId is not set, automatic slide change is not active, so start it
+            startAutomaticSlide();
+        }
+    });
+</script>
+<script>
+    window.addEventListener('scroll', function() {
+    // Get the scroll value
+    const scrollValue = window.scrollY;
+    
+    // Iterate over each parallax section
+    document.querySelectorAll('.parallax-section').forEach(function(section) {
+        // Calculate the new position of the section based on the scroll value
+        const newPosition = -scrollValue * 0.5 + 'px';
+        // Set the new position for the section
+        section.style.transform = 'translateY(' + newPosition + ')';
+    });
+});
+</script>
+
+
+
+{% endblock %}

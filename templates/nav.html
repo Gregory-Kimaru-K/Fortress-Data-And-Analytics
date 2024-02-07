@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='nav.css')}}" >
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body class="nav-body">
+    <header class="header">
+        <div class="logo">
+            <a href="{{ url_for('home') }}"><img src="{{ url_for('static', filename='fortress2.png') }}"></a>
+        </div>
+        <nav class="navbar">
+            <a class="home-nav" href="{{ url_for('home')}}">Home</a>
+            <div class="dropdown-serv">
+                <button class="dropbtn">Services <i class="fa fa-caret-down"></i></button>
+                <div class="dropdown-serv-content">
+                    <a href="{{ url_for('tech_cosultance')}}">Technology Consulting</a>           
+                    <a href="{{ url_for('bsintel')}}">Bussiness Inteligence</a>                         
+                    <a href="{{ url_for('customsoftware') }}">Custom Software Development</a>
+                    <a href="{{ url_for('datawarehousing')}}">Data Warehousing</a>                
+                    <a href="{{ url_for('webdev')}}">Web Development</a>
+                    <a href="{{ url_for('product')}}">Product Engineering</a>
+                    <a href="{{ url_for('softwaretesting')}}">Software Testing</a>
+                    <a href="{{ url_for('mobileapp')}}">Moblie App Development</a>                               
+                    <a href="{{ url_for('datavisualzation')}}">Data Visualization</a>                                
+                </div>
+            </div>  
+                
+            <div class="dropdown-abt">
+                <button class="dropbtn">About <i class="fa fa-caret-down"></i></button>
+                <div class="dropdown-abt-content">
+                    <a href="{{ url_for('team')}}">Team</a>                                
+                    <a href="{{ url_for('contact')}}">Contact</a>                                
+                    <a href="{{ url_for('privacypolicy')}}">Privacy Policy </a>
+                </div>
+            </div> 
+            <div class="dropdown-tech">
+                <button class="dropbtn">Technologies <i class="fa fa-caret-down"></i></button>
+                <div class="dropdown-tech-content">
+                    <a href="{{ url_for('backend')}}">Backend Technologies</a>                               
+                    <a href="{{ url_for('bianalytics')}}">Bi and Analytics</a>                                
+                    <a href="{{ url_for('cloud')}}">Cloud Technologies</a>                                
+                    <a href="{{ url_for('frontend')}}">Frontend Technologies </a>
+                    <a href="{{ url_for('mobile')}}">Mobile Technologies</a>
+                    <a href="{{ url_for('trending')}}">Trending Tech</a>
+                </div>
+            </div>       
+        </nav>
+
+        <!-- <button id="theme-toggle">🌙</button> -->
+
+        <div class="mobile-menu">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div> 
+    </header>
+    <script src="{{ url_for('static', filename='main.js') }}"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const mobileMenuBtn = document.querySelector('.mobile-menu');
+            const navbar = document.querySelector('.navbar');
+
+            mobileMenuBtn.addEventListener('click', function () {
+                navbar.classList.toggle('show');
+            });
+        });
+    </script>
+</body>
+</html>
