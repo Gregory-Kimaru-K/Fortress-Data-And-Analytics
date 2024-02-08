@@ -2,7 +2,6 @@ from flask import Flask, abort, flash, jsonify, render_template, request, redire
 from twilio.rest import Client
 import secrets
 from flask_sqlalchemy import SQLAlchemy
-from flask_mail import Mail, Message
 import os
 from twilio.rest import Client as TwilioClient
 from flask_login import UserMixin
@@ -36,12 +35,6 @@ class Client(db.Model):
     email = db.Column(db.String(60), unique=False, nullable=False)
     reason = db.Column(db.String(1000), unique=False, nullable=False)
     description = db.Column(db.String(1000), unique=False, nullable=False)
-
-
-account_sid = 'AC2b350db86302846f6b12a52d4b98ec4e'
-auth_token ='b8c445efc141bc851e78811c71975b9b'
-
-client = TwilioClient(account_sid, auth_token)
 
 @app.route("/")
 @app.route("/home")
@@ -150,16 +143,16 @@ def sending():
         db.session.add(new_client)
         db.session.commit()
 
-        whatsapp_message = f'New client: {customer_name}\nEmail: {email}\nContact: {customer_contact}\nTopic: {topic}\nBrief: {brief}'
-        try:
-            message = client.messages.create(
-                from_='whatsapp:+14155238886',
-                body=whatsapp_message,
-                to='whatsapp:+254797245933' 
-            )
-            print(f"WhatsApp message sent successfully: {message.sid}")
-        except Exception as e:
-            print("Error sending WhatsApp message:", str(e))
+        # whatsapp_message = f'New client: {customer_name}\nEmail: {email}\nContact: {customer_contact}\nTopic: {topic}\nBrief: {brief}'
+        # try:
+        #     message = client.messages.create(
+        #         from_='whatsapp:+14155238886',
+        #         body=whatsapp_message,
+        #         to='whatsapp:+254797245933' 
+        #     )
+        #     print(f"WhatsApp message sent successfully: {message.sid}")
+        # except Exception as e:
+        #     print("Error sending WhatsApp message:", str(e))
 
         return redirect(request.referrer)
   
