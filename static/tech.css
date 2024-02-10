@@ -208,6 +208,9 @@
 }
 
 @media screen and (max-width:800px) {
+    .main-tech {
+        padding-top: 20%;
+    }
     .tech-dets-intro::before {
         top: 60%;
         height: 10%;
