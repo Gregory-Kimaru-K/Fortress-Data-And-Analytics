@@ -907,14 +907,23 @@ a {
         transform: translateX(-50%);
         width: 88%;
     }
+    .home-about .why {
+        width: 80%;
+        left: 10%;
+    }
 }
 
 
 /*About page*/
 
+.about-head {
+    padding-top: 8%;
+    text-align: center;
+}
+
 
 .about-team {
-    margin-top: 0px;
+    margin-top: 0;
     height: 800px;
     overflow: hidden;
     position: relative;
@@ -942,18 +951,18 @@ a {
 }
 
 .about-team .about-list .team img {
-    width: 50%;
+    width: 40%;
     position: absolute;
-    right: 0;
-    top: 50%;
+    left: 75%;
+    top: 40%;
     transform: translateY(-50%);
 }
 
 
 .about-team .about-list .team .intro {
     position: absolute;
-    top: 50%;
-    width: 400px;
+    top: 40%;
+    width: 50%;
     opacity: 0;
     pointer-events: none;
 }
@@ -987,7 +996,7 @@ a {
 
 .team-arrow {
     position: absolute;
-    bottom: 250px;
+    bottom: 35%;
     width: 900px;
     max-width: 60%;
     left: 25%;
@@ -1173,39 +1182,55 @@ a {
     
 }
 
-@media screen and (max-width: 767px) {
-        .about-team .about-list .team {
-            width: 100%;
-            font-size: 10px;
-        }
-        .about-team {
-            height: 800px;
-        }
-        .about-team .about-list {
-            height: 80%;
-        }
-        .about-team .about-list .team .intro {
-            width: 50%;
-        }
+@media screen and (max-width:800px) {
+    .about-head {
+        padding-top: 15%;
+        position: absolute;
+        left: 40%;
+    }
+    .team-arrow {
+        bottom: 25%;
+    }
 
-        .about-team .about-list .team img {
-            width: 40%;
-        }
+    .about-team .about-list .team img {
+        left: 50%;
+    }
 
-        .about-team .about-list .team .detail .title {
-            font-size: 20px;
-        }
+    .about-team .about-list {
+        top: 7%;
+    }
+    .about-team .about-list .team {
+        width: 100%;
+        font-size: 10px;
+    }
+    .about-team {
+        height: 800px;
+    }
+    .about-team .about-list {
+        height: 80%;
+    }
+    .about-team .about-list .team .intro {
+        width: 50%;
+    }
 
-        .about-team .about-list .team .detail .des {
-            height: 100px;
-            overflow: auto;
-        }
-        .about-team .about-list .team-arrow {
-            position: absolute;
-            bottom: -10000px;
-            left: 50%;
-            transform: translateX(-50%);
-        }
+    .about-team .about-list .team img {
+        width: 40%;
+    }
+
+    .about-team .about-list .team .detail .title {
+        font-size: 20px;
+    }
+
+    .about-team .about-list .team .detail .des {
+        height: 100px;
+        overflow: auto;
+    }
+    .about-team .about-list .team-arrow {
+        position: absolute;
+        bottom: -10000px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
 }
 
 @media screen and (max-width: 767px) {

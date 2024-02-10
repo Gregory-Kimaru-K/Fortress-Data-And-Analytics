@@ -15,7 +15,7 @@
         </div>
         <nav class="navbar">
             <a class="home-nav" href="{{ url_for('home')}}">Home</a>
-            <div class="dropdown-serv">
+            <div class="dropdown-serv dropdown">
                 <button class="dropbtn">Services <i class="fa fa-caret-down"></i></button>
                 <div class="dropdown-serv-content">
                     <a href="{{ url_for('tech_cosultance')}}">Technology Consulting</a>           
@@ -30,7 +30,7 @@
                 </div>
             </div>
                 
-            <div class="dropdown-abt">
+            <div class="dropdown-abt dropdown">
                 <button class="dropbtn">About <i class="fa fa-caret-down"></i></button>
                 <div class="dropdown-abt-content">
                     <a href="{{ url_for('team')}}">Team</a>                                
@@ -38,10 +38,10 @@
                     <a href="{{ url_for('privacypolicy')}}">Privacy Policy </a>
                 </div>
             </div> 
-            <div class="dropdown-tech">
+            <div class="dropdown-tech dropdown">
                 <button class="dropbtn">Technologies <i class="fa fa-caret-down"></i></button>
                 <div class="dropdown-tech-content">
-                    <a href="{{ url_for('backend')}}">Backend Technologies</a>                               
+                    <a href="{{ url_for('backend')}}">Backend Technologies</a>                             
                     <a href="{{ url_for('bianalytics')}}">Bi and Analytics</a>                                
                     <a href="{{ url_for('cloud')}}">Cloud Technologies</a>                                
                     <a href="{{ url_for('frontend')}}">Frontend Technologies </a>
@@ -49,7 +49,7 @@
                     <a href="{{ url_for('trending')}}">Trending Tech</a>
                 </div>
             </div> 
-            <div class="dropdown-ind">
+            <div class="dropdown-ind dropdown">
                 <button class="dropbtn">Industries <i class="fa fa-caret-down"></i></button>
                 <div class="dropdown-ind-content">
                     <a href="{{ url_for('fintech')}}">Fintech Software Development</a>           
@@ -66,7 +66,7 @@
                             
                 </div>
             </div>  
-            <div class="dropdown-sol">
+            <div class="dropdown-sol dropdown">
                 <button class="dropbtn">Business Solutions <i class="fa fa-caret-down"></i></button>
                 <div class="dropdown-sol-content">
                     <a href="{{ url_for('erp')}}">Custom ERPs Software</a>           
@@ -75,7 +75,7 @@
                     <a href="{{ url_for('sfa')}}">Mobile Sales Force Automation (SFA)</a>                
                 </div>
             </div> 
-            <div class="dropdown-hire">
+            <div class="dropdown-hire dropdown">
                 <button class="dropbtn">Hire Talent <i class="fa fa-caret-down"></i></button>
                 <div class="dropdown-hire-content">
                     <a href="{{ url_for('dev')}}">Hire Dedicated Developers</a>           
