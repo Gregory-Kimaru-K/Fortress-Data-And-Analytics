@@ -1,63 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Parallax Effect</title>
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styled Form</title>
+    <style>
+        /* CSS styles */
+        .message-icon {
+            position: fixed;
+            left: 90%;
+            bottom: 3%;
+            cursor: pointer;
+            z-index: 5;
+        }
 
-    .container {
-      position: relative;
-      height: 2000px; /* Adjust height as needed */
-    }
+        .message-icon img {
+            width: 80px;
+            height: 80px;
+            background: rgba(173, 255, 47, 0.8);
+            border-radius: 200px;
+            transition: .5s;
+        }
 
-    .overlap {
-      width: 200px;
-      height: 100px;
-      background-color: rgba(0, 0, 0, 0.5);
-      color: white;
-      text-align: center;
-      line-height: 100px;
-      transition: transform 0.5s ease-out; /* Add smooth transition for the parallax effect */
-    }
+        .message-icon img:hover {
+            background: greenyellow;
+            width: 83px;
+            height: 83px;
+        }
 
-    #div1 {
-      position: relative;
-      left: 50%;
-      width: 100%;
-      height: 50%;
-      transform: translateX(-50%);
-    }
+        .popup {
+            display: none;
+            position: fixed;
+            bottom: 9%;
+            right: 9%;
+            width: 40%;
+            max-width: 100%;
+            max-height: 100%;
+            background: blueviolet;
+            padding: 20px;
+            z-index: 5;
+            transition: opacity 1s ease-in-out;
+        }
 
-    #div2 {
-      position: relative;
-      left: 50%;
-      width: 100%;
-      height: 50%;
-      transform: translate(-50%, 0); /* Initial transform */
-    }
-  </style>
+        .popup.showup {
+            display: block;
+            opacity: 1;
+        }
+
+        .popup.hide {
+            opacity: 0;
+        }
+
+        .popup .popup-content h2 {
+            text-align: center;
+        }
+
+        .popup-content {
+            position: relative;
+        }
+
+        .popup form input[type="text"],
+        .popup form input[type="email"],
+        .popup form input[type="tel"],
+        .popup form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+
+        .popup form input[type="submit"] {
+            width: 50%;
+            padding: 10px;
+            margin: 10px auto;
+            border: none;
+            border-radius: 5px;
+            background-color: #dc422a;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .popup form input[type="submit"]:hover {
+            background-color: #c6381e;
+        }
+
+        .popup form textarea {
+            height: 100px; /* Adjust height as needed */
+        }
+
+        .popup form .sub input {
+            position: relative;
+            left: 25%;
+            width: 50%;
+            height: 10%;
+            padding: 2%;
+            border-radius: 20px;
+            font-size: 13px;
+            transition: 1s ease-in-out;
+        }
+
+        .popup form .sub input:hover {
+            width: 52%;
+            height: 12%;
+            background-color: #dc422a;
+        }
+    </style>
 </head>
 <body>
-  <div class="container">
-    <div class="overlap" id="div1">Div 1</div>
-    <div class="overlap" id="div2">Div 2</div>
-  </div>
-  <script>
-    window.addEventListener('scroll', function() {
-      var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-      var div1 = document.getElementById('div1');
-      var div2 = document.getElementById('div2');
-      var speed = 0.3; // Adjust the speed of the parallax effect
 
-      // Calculate the new position of div2 based on the scroll position
-      var newPosition = -scrollTop * speed;
-      div2.style.transform = 'translate(-50%, ' + newPosition + 'px)';
-    });
-  </script>
+<div class="message-icon" onclick="togglePopup()"><img src="{{ url_for('static', filename='message.png') }}" alt=""></div>
+<div class="popup" id="popup">
+    <div class="popup-content">
+        <h2>Contact Us</h2>
+        <form>
+            <input type="text" name="customer_name" placeholder="Name" required><br>
+            <input type="email" name="email" placeholder="Email" required><br>
+            <input type="tel" name="customer_contact" placeholder="Contact No" required><br>
+            <input type="text" name="topic" placeholder="Enter Your Topic" required><br>
+            <textarea name="brief" rows="10" cols="30" placeholder="Requirement Brief" required></textarea><br>
+
+            <div class="sub">
+                <input type="submit" value="submit">
+            </div>
+        </form>
+    </div>
+</div>
+
+<script>
+    function togglePopup() {
+        var popup = document.getElementById("popup");
+        popup.classList.toggle("showup");
+    }
+</script>
+
 </body>
 </html>

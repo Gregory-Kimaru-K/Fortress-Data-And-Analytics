@@ -1,40 +1,36 @@
-from flask import Flask, abort, flash, jsonify, render_template, request, redirect, url_for
-from twilio.rest import Client
+from flask import Flask, render_template
 import secrets
-from flask_sqlalchemy import SQLAlchemy
-import os
-from twilio.rest import Client as TwilioClient
-from flask_login import UserMixin
+
 
 
 
 app = Flask(__name__)
 
-current_dir = os.path.abspath(os.path.dirname(__file__))
-database_path = os.path.join(current_dir, 'data.db')
+# current_dir = os.path.abspath(os.path.dirname(__file__))
+# database_path = os.path.join(current_dir, 'data.db')
 
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///' + database_path
-app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+# app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///' + database_path
+# app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 
-db = SQLAlchemy(app)
+# db = SQLAlchemy(app)
 
 app.config['SECRET_KEY'] = secrets.token_hex(16)
 
-class User(UserMixin, db.Model):
-    id = db.Column(db.Integer, primary_key=True)
-    username = db.Column(db.String(50), unique=True, nullable=False)
-    password = db.Column(db.String(100), nullable=False)
-    is_admin = db.Column(db.Boolean, default=True)
-    is_super = db.Column(db.Boolean, default=False)
+# class User(UserMixin, db.Model):
+#     id = db.Column(db.Integer, primary_key=True)
+#     username = db.Column(db.String(50), unique=True, nullable=False)
+#     password = db.Column(db.String(100), nullable=False)
+#     is_admin = db.Column(db.Boolean, default=True)
+#     is_super = db.Column(db.Boolean, default=False)
 
-class Client(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
-    name = db.Column(db.String(100), unique=False, nullable=False)
-    tel_no = db.Column(db.String(30), unique=False, nullable=False)
-    email = db.Column(db.String(60), unique=False, nullable=False)
-    reason = db.Column(db.String(1000), unique=False, nullable=False)
-    description = db.Column(db.String(1000), unique=False, nullable=False)
+# class Client(db.Model):
+#     id = db.Column(db.Integer, primary_key=True)
+#     name = db.Column(db.String(100), unique=False, nullable=False)
+#     tel_no = db.Column(db.String(30), unique=False, nullable=False)
+#     email = db.Column(db.String(60), unique=False, nullable=False)
+#     reason = db.Column(db.String(1000), unique=False, nullable=False)
+#     description = db.Column(db.String(1000), unique=False, nullable=False)
 
 @app.route("/")
 @app.route("/home")
@@ -259,6 +255,4 @@ def full():
   
 
 if __name__ == '__main__':
-    with app.app_context():  
-        db.create_all()
-    app.run(debug=False)
+    app.run(debug=True)
