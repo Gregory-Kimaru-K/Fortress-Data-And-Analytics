@@ -127,24 +127,22 @@
         </div>
     </div>
     <div class="message-icon" onclick="togglePopup()"><img src="{{ url_for('static', filename='message.png') }}" alt=""></div>
-        <div class="popup" id="popup">
-            <div class="popup-content">
-                <span class="close-btn" onclick="togglePopup()">&times;</span>
-                <h2>Contact Us</h2>
-                <form">
-                    <input type="text" name="customer_name" placeholder="Name" required><br>
-                    <input type="email" name="email" placeholder="Email" required><br>
-                    <input type="tel" name="customer_contact" placeholder="Contact No" required><br>
-                    <input type="text" name="topic" placeholder="Enter You Topic" required><br>
-                    <textarea name="brief" rows="10" cols="30" placeholder="Requirement Brief" required></textarea><br>
+    <div class="popup" id="popup">
+        <div class="popup-content">
+            <h2>Contact Us</h2>
+            <form>
+                <input type="text" name="customer_name" placeholder="Name" required><br>
+                <input type="email" name="email" placeholder="Email" required><br>
+                <input type="tel" name="customer_contact" placeholder="Contact No" required><br>
+                <input type="text" name="topic" placeholder="Enter Your Topic" required><br>
+                <textarea name="brief" rows="10" cols="30" placeholder="Requirement Brief" required></textarea><br>
 
-                    <div class="sub">
-                        <input type="submit" value="submit">
-                    </div>
-                </form>
-            </div>
+                <div class="sub">
+                    <input type="submit" value="submit">
+                </div>
+            </form>
         </div>
-
+    </div>
     <script src="{{ url_for('static', filename='main.js') }}"></script>
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 

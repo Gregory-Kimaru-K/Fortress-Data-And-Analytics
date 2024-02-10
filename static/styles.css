@@ -576,14 +576,6 @@ a {
     position: relative;
 }
 
-.close-btn {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 20px;
-    cursor: pointer;
-}
-
 .popup form input[type="text"],
 .popup form input[type="email"],
 .popup form input[type="tel"],
@@ -615,7 +607,7 @@ a {
 }
 
 .popup form textarea {
-    height: 100px;
+    height: 100px; /* Adjust height as needed */
 }
 
 .popup form .sub input {
