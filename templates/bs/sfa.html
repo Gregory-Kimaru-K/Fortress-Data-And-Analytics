@@ -1,0 +1,290 @@
+{% extends 'base.html' %}
+{% block content %}
+<main class="bs">
+    <div class="bs-intro">
+        <div class="bs-intro-cont">
+            <h1>
+                Mobile Sales Force Automation Solutions
+            </h1>
+            <p>
+                Gain More Visibility, Agility, And Productivity With Mobile Sales Force Automation Software,
+            </p>
+            <a href="{{ url_for('contact') }}">
+                <button>
+                    Request A Demo
+                </button>
+            </a>
+        </div>
+        <img src="{{ url_for('static', filename='landing/sfa.png') }}" alt="">
+    </div>
+
+    <div class="something">
+        <h2>
+            Sales Force Automation Overview
+        </h2>
+        <p>
+            Sales Force Automation (SFA) refers to the systems that automate sales activities and processes for sales professionals. It is one foundational software for organizations to manage and track all sales interactions and administrative activities between sales teams and customers. The primary aim of the Sales Force Automation System is to automate certain repetitive and time-consuming everyday tasks of the sales team.
+        </p>
+    </div>
+
+    <div class="bs-benefits">
+        <h3>
+            Major Components Of Mobile Sales Force Automation Solution
+        </h3>
+        <ul>
+            <li>
+                Pre-sales & Order Taking
+            </li>
+            <li>
+                Direct Sales/Van Sales Automation
+            </li>
+            <li>
+                Marketing & BTL Activities
+            </li>
+            <li>
+                Customized Survey/Feedback
+            </li>
+        </ul>
+    </div>
+
+    <div class="bs-benefits">
+        <h2>
+            Features Of Sales Force Automation
+        </h2>
+
+        <ul>
+            <li>
+                Client management
+            </li>
+            <li>
+                Cross-platform and online/offline mode support
+            </li>
+            <li>
+                Data synchronization through GPRS ⁄ EDGE ⁄ 3G ⁄ WiFi
+            </li>
+            <li>
+                Third-party/legacy system integration
+            </li>
+            <li>
+                Real-time/Near Real-time information sharing
+            </li>
+            <li>
+                Sustenance for manifold Bluetooth printers, E-Mail/SMS Integration, and Bar Code Scanning
+            </li>
+            <li>
+                Help to sell features: Suggested Order, last n transactions, outstanding invoices, etc.
+            </li>
+            <li>
+                End-Day activities: unserved reasons, expense details, collection and deposition details, etc.
+            </li>
+        </ul>
+    </div>
+
+    <div class="discover">
+        <h2>
+            Sales Force Automation
+        </h2>
+        <div class="discover-cont">
+            <div class="div">
+        <img src="{{ url_for('static', filename='bs_sol/mhard1.png') }}" alt="">
+        <h3>Automated Field Force Activities</h3>
+        <p>Management, planning and execution of complete sales routine</p>
+    </div>
+    <div class="div">
+        <img src="{{ url_for('static', filename='bs_sol/mhard2.png') }}" alt="">
+        <h3>BI Analytics & Reports</h3>
+        <p>
+            Ad-hoc logical reports driven by Pentaho Saiku tool
+        </p>
+    </div>
+    <div class="div">
+        <img src="{{ url_for('static', filename='bs_sol/mhard3.png') }}" alt="">
+        <h3>Order taking to Invoicing</h3>
+        <p>
+            Secondary order administration, invoice management, on the go printing
+        </p>
+    </div>
+    <div class="div">
+        <img src="{{ url_for('static', filename='bs_sol/mhard4.png') }}" alt="">
+        <h3>Van Sales Automation</h3>
+        <p>
+            Stock Management in van and mobile, invoicing in real-time
+        </p>
+    </div>
+    <div class="div">
+        <img src="{{ url_for('static', filename='bs_sol/mhard5.png') }}" alt="">
+        <h3>Apply Deals & Promotions</h3>
+        <p>
+            Deals & Promotions on products with performance perceptibility
+        </p>
+    </div>
+    <div class="div">
+        <img src="{{ url_for('static', filename='bs_sol/mhard6.png') }}" alt="">
+        <h3>Field Force Attendance Registration</h3>
+        <p>
+            Real time mobile built attendance tracking
+        </p>
+    </div>
+    <div class="div">
+        <img src="{{ url_for('static', filename='bs_sol/mhard7.png') }}" alt="">
+        <h3>Sales Route Management</h3>
+        <p>
+            Geo Fencing route and handling sales executive operations
+        </p>
+    </div>
+    <div class="div">
+        <img src="{{ url_for('static', filename='bs_sol/mhard8.png') }}" alt="">
+        <h3>Surveys</h3>
+        <p>
+            Applying customer feedback for higher success ratios
+        </p>
+    </div>
+        </div>
+    </div>
+
+    <div class="bs-benefits">
+        <h2>
+            Benefits of Sales Force Automation System
+        </h2>
+        <ul>
+            <li>
+                Reduced cost and response time between field staff and back office
+            </li>
+            <li>
+                Timely information exchange with field staff
+            </li>
+            <li>
+                Increased productivity and efficiency
+            </li>
+            <li>
+                Competitive advantage in cost, revenue, and time
+            </li>
+            <li>
+                Increase in sales revenue and market share
+            </li>
+            <li>
+                Real-time performance, deals, and workflow management
+            </li>
+        </ul>
+    </div>
+
+    <div class="services-ind">
+        <h2>
+            Industries We Serve
+        </h2>
+        <div class="ind-cont">
+            <div class="contents">
+                <a href="{{ url_for('fitness') }}">
+                    <img src="{{ url_for('static', filename='industries/fitness.png') }}">
+                    <h5>
+                        Fitness
+                    </h5>
+                </a>
+            </div>
+            <div class="contents">
+                <a href="{{ url_for('fintech') }}">
+                    <img src="{{ url_for('static', filename='industries/fintech.png') }}">
+                    <h5>
+                        Fintech
+                    </h5>
+                </a>
+            </div>
+            <div class="contents">
+                <a href="{{ url_for('education') }}">
+                    <img src="{{ url_for('static', filename='industries/education.png') }}">
+                    <h5>
+                        Education
+                    </h5>
+                </a>
+            </div>
+            <div class="contents">
+                <a href="{{ url_for('healthcare') }}">
+                    <img src="{{ url_for('static', filename='industries/healthcareicon.png') }}">
+                    <h5>
+                        Healthcare
+                    </h5>
+                </a>
+            </div>
+            <div class="contents">
+                <a href="{{ url_for('energy') }}">
+                    <img src="{{ url_for('static', filename='industries/energy-and-utilities.png') }}">
+                    <h5>
+                        Energy & Utilities
+                    </h5>
+                </a>
+            </div>
+            <div class="contents">
+                <a href="{{ url_for('travel') }}">
+                    <img src="{{ url_for('static', filename='industries/travel-and-hospitality.png') }}">
+                    <h5>
+                        Travel & Hospitality
+                    </h5>
+                </a>
+            </div>
+            <div class="contents">
+                <a href="{{ url_for('manufacturing') }}">
+                    <img src="{{ url_for('static', filename='industries/manufacturing.png') }}">
+                    <h5>
+                        Manufacturing
+                    </h5>
+                </a>
+            </div>
+            <div class="contents">
+                <a href="{{ url_for('adverts') }}">
+                    <img src="{{ url_for('static', filename='industries/advertising.png') }}">
+                    <h5>
+                        Advertising
+                    </h5>
+                </a>
+            </div>
+            <div class="contents">
+                <a href="{{ url_for('retail') }}">
+                    <img src="{{ url_for('static', filename='industries/retail.png') }}">
+                    <h5>
+                        Retail
+                    </h5>
+                </a>
+            </div>
+            <div class="contents">
+                <a href="{{ url_for('entertain') }}">
+                    <img src="{{ url_for('static', filename='industries/media-and-entertainment.png') }}">
+                        <h5>
+                            Media & Entertainment
+                        </h5>
+                    </a>
+            </div>
+
+            <div class="contents">
+                <a href="{{ url_for('supplychain') }}">
+                    <img src="{{ url_for('static', filename='industries/logistics.png') }}">
+                    <h5>
+                        Supply Chain And Logistics
+                    </h5>
+                </a>
+            </div>
+            <div class="contents">
+                <a href="{{ url_for('travel') }}">
+                    <img src="{{ url_for('static', filename='industries/life-sciences.png') }}" alt="">
+                    <h5>
+                        Life Science
+                    </h5>
+                </a>
+            </div>  
+        </div>
+    </div>
+
+    <div class="services-contact">
+        <img src="{{ url_for('static', filename='services/Project_With_Us_graphic.png') }}" alt="">
+        <h2>Contact Us</h2>
+        <p>
+            Fill in this form and we will be with you within 24 hours
+        </p>
+        <a href="{{ url_for('contact') }}">
+            <button>
+                Contact Us
+            </button>
+        </a>
+    </div>
+    
+</main>
+{% endblock %}

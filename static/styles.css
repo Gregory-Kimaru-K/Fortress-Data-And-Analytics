@@ -23,28 +23,26 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Arial', sans-serif;
-    background-color: #fff;
+    background-color: #a4f4f9;
 }
 
-.dark-mode #base-body {
-    background-color: #000;
-}
 
 a {
     text-decoration: none;
 }
 
 #preloader {
-    background: black url(../static/preload.gif) no-repeat center;
-    background-size: 50%;
+    background: black url(../static/preloader.gif) no-repeat center;
+    background-size: 20%;
     height: 100vh;
     width: 100%;
     position: fixed;
+    overflow-y: hidden;
+    overflow-x: hidden;
     z-index: 100;
 }
 
 .some-about {
-    margin-top: 1%;
     margin-left: 0.5%;
     padding: 2%;
     font-size: 20px;
@@ -58,6 +56,7 @@ a {
     box-shadow: 6px 10px 22px 1px rgba(0,0,0,0.75);
     -webkit-box-shadow: 6px 10px 22px 1px rgba(0,0,0,0.75);
     -moz-box-shadow: 6px 10px 22px 1px rgba(0,0,0,0.75);
+    z-index: 1;
 }
 
 .some-about .content {
@@ -80,7 +79,7 @@ a {
 
 .footer::before {
     content: "";
-    background-image: linear-gradient(45deg,white, blue, green, black);
+    background-image: linear-gradient(45deg,#989898, blue, green, black);
     background-attachment: fixed;
     background-size: 500%;
     width: 100%;
@@ -111,7 +110,7 @@ a {
     background: transparent;
     font-weight: 300;
     font-size: 15px;
-    margin-top: 20%;
+    margin-top: 5%;
 }
 
 .footer .services ul li,
@@ -184,7 +183,7 @@ a {
     position: relative;
     text-align: center;
     width: 100%;
-    height: 10%;
+    height: 1%;
     padding: 2%;
     top: 0;
     background: #fff;
@@ -192,63 +191,69 @@ a {
 }
 
 
+.ind-color {
+    position: relative;
+    z-index: 3;
+    color: #fff;
+    margin-top: 10%;
+}
 
-.bs-sol-head {
+.ind-color .bs-sol-head {
+    position: relative;
     text-align: center;
-    margin-top: 40px;
+    margin-top: 100px;
+    z-index: 3;
+    opacity: 20000;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 
-.aligning::before {
+
+.ind-color::before {
     content: "";
-    background-image: linear-gradient(45deg, blue, green, black);
+    background-image: linear-gradient(45deg,white, blue, green);
     background-attachment: fixed;
-    background-size: cover;
+    background-size: 500%;
     width: 100%;
     height: 100%;
-    filter: blur(100px);
+    filter: blur(200px);
     position: absolute;
+    top: 15%;
     left:0;
-    top: -40%;
-    z-index: -1;
-    animation: alignanime 10s ease-in-out infinite alternate ;
-}
+    z-index: 2.1;
+    animation: footeranime 10s ease-in-out infinite alternate ;
 
-@keyframes alignanime {
-    0% {
-        background-position: left;
-    }
-    100% {
-        background-position: right;
-    }
 }
 
 .aligning {
-    position: absolute;
+    position: relative;
     top: 260%;
-    left: 37%;
-    padding-top: 16%;
+    left: 0;
+    padding-top: 2%;
     padding-bottom: 0;
-    height: 100%;
+    height: 10%;
     display: flex;
     justify-content: center;
-    align-items: center;
-    margin-bottom: 0;
+    margin-bottom: 5%;
+    z-index: 2.2;
 }
 
 .bussiness-sol {
-    margin-top: -5%;  
+    margin-top: 2%;  
     width: 400px;
     height: 650px;
     border-radius: 10px;
     overflow: hidden;
     border: 5px solid black;
+    z-index: 2.2;
 }
 
 .slides {
     width: 500%;
     height: 500px;
     display: flex;
+    z-index: 2.2;
+
 }
 
 .slides input {
@@ -396,14 +401,29 @@ a {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 250px;
+    margin-top: 100px;
     position: relative;
-    z-index: 1;
+    z-index: 2;
+    color: #fff;
+}
+
+.technologies::before {
+    content: "";
+    background-image: linear-gradient(45deg,white, blue, green, black);
+    background-attachment: fixed;
+    background-size: 500%;
+    width: 100%;
+    height: 100%;
+    filter: blur(100px);
+    position: absolute;
+    left:0;
+    z-index: 1.1;
+    animation: footeranime 10s ease-in-out infinite alternate ;
 }
 
 .technologies h2 {
     position: relative;
-    top: -15%;
+    top: -5%;
     margin-top: 2%;
     font-size: 40px;
 }
@@ -413,7 +433,7 @@ a {
     top: 50%; 
     left: 50%; 
     transform: translate(-50%, -50%);
-    z-index: -1;
+    z-index: 1.2;
 }
 
 .technologies .tech-content .tech-heading {
@@ -447,7 +467,7 @@ a {
     display: flex;
     width: 100%;
     justify-content: center;
-    margin-top: 20px;
+    margin-top: 40px;
     position: relative;
     z-index: 2;
 }
@@ -463,6 +483,7 @@ a {
 
 .buttons button:hover {
     background-color: aqua;
+    transform: scale(1.1);
 }
 
 .buttons button.active {
@@ -594,7 +615,7 @@ a {
 }
 
 .popup form textarea {
-    height: 100px; /* Adjust height as needed */
+    height: 100px;
 }
 
 .popup form .sub input {
@@ -614,6 +635,266 @@ a {
     background-color: #dc422a;
 }
 
+.services-ind::before {
+    content: "";
+    background-image: linear-gradient(45deg,#f0ffff, #faebd7, #fff5ee);
+    background-attachment: fixed;
+    background-size: 700%;
+    width: 100%;
+    height: 100%;
+    filter: blur(100px);
+    position: absolute;
+    left:0;
+    z-index: -1;
+    animation: serviceanime 10s ease-in-out infinite alternate ;
+}
+
+.services-ind {
+    position: relative;
+    padding: 10%;
+    z-index: 4;
+    font-size: large;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    opacity: 1;
+}
+
+.services-ind h2 {
+    text-align: center;
+    color: #fff;
+}
+
+.services-ind .ind-cont {
+    position: relative;
+    left: 5%;
+    display: flex;
+    overflow: hidden;
+    flex-wrap: wrap;
+
+}
+
+.services-ind .ind-cont .contents {
+    width: 25%;
+    margin: 20px;
+    padding: 5%;
+    height: 100%;
+    text-align: center;
+    border: 2px solid black;
+    border-radius: 20px;
+    background-color: aqua;
+    transition: 1s;
+}
+
+.services-ind .ind-cont .contents:hover {
+    position: relative;
+    width: 27%;
+    box-shadow: 10px 10px 15px 8px rgba(0,0,0,0.22);
+    -webkit-box-shadow: 10px 10px 15px 8px rgba(0,0,0,0.22);
+    -moz-box-shadow: 10px 10px 15px 8px rgba(0,0,0,0.22);
+}
+
+ .services-contact {
+    padding: 10%;
+    position: relative;
+    width: 70%;
+    height: 100%;
+    left: 15%;
+    border-radius: 10px;
+    background-color: aqua;
+}
+
+ .services-contact img {
+    position: relative;
+    left: 13%;
+    top: 0;
+    width: 70%;
+}
+
+
+ .services-contact h2,
+ .services-contact p {
+    text-align: center;
+    padding: 4%;
+}
+
+.services-contact button {
+    width: 60%;
+    height: 44px;
+    margin-top: 20%;
+    position: relative;
+    left: 20%;
+    border-radius: 20px;
+    background: aqua;
+    z-index: 1;
+    overflow: hidden;
+    transition: 1s;
+}
+
+
+
+
+.services-contact button::after {
+    content: ""; 
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);  
+    z-index: -1;
+    transition: transform .5s ease-in-out;
+    transform: scaleX(0);
+    transform-origin: center;
+}
+
+.services-contact button:hover {
+    width: 62%;
+    height: 46px;
+    font-size: 15px;   
+}
+
+.services-contact button:hover::after {
+    transform: scaleX(1);
+    transform-origin: center;
+}
+
+.home-about-title {
+    text-align: center;
+    font-weight: 300;
+    padding-top: 4%;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    opacity: 2;
+    margin-top: 5%;
+    z-index: 5;
+    color: #000;
+}
+
+.home-about {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+.home-about img {
+    position: relative;
+    width: 60%;
+}
+.home-about .team-home {
+    position: absolute;
+    padding: 2%;
+    width: 40%;
+    left: 60%;
+    top: 40%;
+
+}
+
+.home-about .mission {
+    position: absolute;
+    padding: 2%;
+    width: 40%;
+    left: 60%;
+    top: 0;
+}
+
+.home-about .vision {
+    position: absolute;
+    padding: 2%;
+    width: 40%;
+    left: 60%;
+    top: 20%;
+}
+
+.home-about .why {
+    position: relative;
+    left: 30%;
+    text-align: center;
+    width: 40%;
+    padding-top: 5%;
+    margin-top: 6%;
+
+}
+
+.home-about .team-home button {
+    position: relative;
+    left: 30%;
+}
+
+.home-about .team-home button,
+.home-about .why button {
+    position: relative;
+    margin-top: 5%;
+    width: 50%;
+    height: 40px;
+    background-color: #004242;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 1s;
+    margin-bottom: 5%;
+    color: aliceblue;
+}
+
+.home-about .team-home button:hover,
+.home-about .why button:hover {
+    transform: scale(1.1);
+    background-color: aqua;
+    color: #000;
+}
+
+@media screen and (max-width:800px) {
+    .services-contact {
+        padding: 3%;
+    }
+    .services-contact button {
+        width: 70%;
+        margin-top: 2px;
+        left: 15%;
+    }
+    .services-contact button:hover {
+        width: 72%;
+        font-size: 13px;
+    }
+     .services-ind .ind-cont .contents {
+        width: 50%;
+        margin-left: 80px;
+    }
+    .services-ind .ind-cont .contents:hover{
+        width: 52%;
+    }
+    .services-benefits .benefits-cont  .contents {
+        width: 80%;
+        left: 0;
+    }
+    .home-about img {
+        position: relative;
+        left: 10%;
+        width: 80%;
+    }
+
+    .home-about .team-home,
+    .home-about .mission,
+    .home-about .vision {
+        position: relative;
+        width: 80%;
+        text-align: center;
+        left: 10%;
+    }
+
+    .home-about .team-home button,
+    .home-about .why button {
+        width: 80%;
+    }
+
+    .home-about .team-home button {
+        left: 40%;
+        transform: translateX(-50%);
+    }
+
+    .home-about .team-home button:hover {
+        transform: translateX(-50%);
+        width: 88%;
+    }
+}
 
 
 /*About page*/
@@ -836,6 +1117,34 @@ a {
     transition: 1s;
 }
 
+.about-team .about-list .ceo .team-content .get-started a button {
+    width: 60%;
+    height: 40px;
+    background: #004242;
+    color: aliceblue;
+    transition: 1s;
+    border: none;
+    border-radius: 20px;
+    margin-top: 10%;
+    cursor: pointer;
+}
+
+.about-team .about-list .ceo .team-content .get-started a button:hover {
+    transform: scale(1.1);
+    background: #00ff00;
+    color: #000;
+}
+
+
+
+.about-team .about-list .our .team-content .get-started a img {
+    width: 10%;
+    cursor: pointer;
+    position: relative;
+    margin-top: 10%;
+    left: 10%;
+}
+
 
 @media screen and (max-width: 991px) {
     .footer {
@@ -911,6 +1220,7 @@ a {
 
     .technologies {
         height: 400px;
+        margin-top: 200px;
     }
 
     .technologies h2 {
@@ -960,12 +1270,82 @@ a {
 
     .message-icon {
         left: 80%;
-        bottom: 5%;
-        width: 60px;
-        height: 60px;
+        bottom: 8%;
+        width: 30px;
+        height: 30px;
     }
     .popup {
         width: 70%;
         bottom: 15%;
+    }
+
+    .services-contact {
+        width: 90%;
+        height: 100%;
+        left: 5%;
+    }
+}
+
+.bs-brief h2 {
+    margin-top: 15%;
+    font-size: 50px;
+    margin-bottom: 5%;
+    text-align: center;
+}
+
+.bs-brief .bs-brief-cont {
+    display: flex;
+    overflow: hidden;
+    flex-wrap: wrap;
+}
+
+.bs-brief .bs-brief-cont .content {
+    background-color: #00ff00;
+    padding: 5%;
+    border-radius: 30px;
+    text-align: center;
+    width: 30%;
+    margin-left: 13%;
+    margin-bottom: 5%;
+    transition: 1s;
+}
+
+.bs-brief .bs-brief-cont .content:hover {
+    background: #39ff14;
+    color: #000;
+    box-shadow: 10px 10px 32px 6px rgba(0,0,0,0.8);
+    -webkit-box-shadow: 10px 10px 32px 6px rgba(0,0,0,0.8);
+    -moz-box-shadow: 10px 10px 32px 6px rgba(0,0,0,0.8);
+}
+
+.bs-brief .bs-brief-cont .center {
+    margin-left: 35%;
+}
+
+.bs-brief .bs-brief-cont .content a button {
+    width: 50%;
+    height: 40px;
+    background: #004242;
+    margin-top: 10%;
+    color: aliceblue;
+    transition: 1s;
+    cursor: pointer;
+}
+
+.bs-brief .bs-brief-cont .content a button:hover {
+    transform: scale(1.1);
+    background-color: #a4f4f9;
+    color: #000;
+}
+
+@media screen and (max-width:800px) {
+    .bs-brief .bs-brief-cont .content {
+        width: 80%;
+        margin-left: 10%;
+    }
+    
+    .bs-brief .bs-brief-cont .center {
+        width: 80%;
+        margin-left: 10%;
     }
 }

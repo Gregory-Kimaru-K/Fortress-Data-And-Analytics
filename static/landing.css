@@ -447,10 +447,10 @@
 
 .carousel.showDetail .list .item .detail .getintouch button {
     font-family: Poppins;
-    background-color: blue;
-    border: 1px solid red;
+    background-color: aqua;
+    border: 1px solid ;
     width: 60%;
-    height: 80%;
+    height: 35px;
     border-radius: 20px;
     margin-right: 100px;
     font-weight: 500;
@@ -514,7 +514,7 @@
     width: 500px;
     height: 300px;
     content: '';
-    background-image: linear-gradient(45deg,#00A6A6, #20b2aa, #7fffd4);
+    background-image: linear-gradient(45deg, #000036, #560319);
     position: absolute;
     z-index: -1;
     border-radius: 20% 30% 60% 30%;
@@ -523,8 +523,8 @@
     left: 50%;
     transform: translate(-10%, -50%);
     transition: 1s;
-    background-size: 500%;
-    animation: carouselcolor 5s ease-in-out infinite alternate;
+    /* background-size: 500%; */
+    /* animation: carouselcolor 5s ease-in-out infinite alternate; */
 }
 
 @keyframes carouselcolor {
@@ -564,10 +564,16 @@
         }
         .carousel .list .item .intro {
             width: 50%;
+            top: 30%;
         }
 
         .carousel .list .item img {
             width: 40%;
+        }
+
+        .carousel.showDetail .list .detail {
+            top: 5%;
+            height: 80%;
         }
 
         .carousel .list .item .detail .title {
@@ -575,8 +581,8 @@
         }
 
         .carousel .list .item .detail .des {
-            height: 100px;
             overflow: auto;
+            font-size: 12px;
         }
         .carousel .list .arrows {
             position: absolute;

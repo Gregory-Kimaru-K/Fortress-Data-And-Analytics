@@ -1,0 +1,170 @@
+{% extends "base.html" %}
+{% block content %}
+<main class="main-services">
+    <div class="services-intro">
+        <h1>
+            Hire UI UX Designer
+        </h1>
+        <div class="flexing">
+            <div class="flex-intro">
+                <p>
+                    With a complete focus on developing visually appealing designs with utmost accuracy and utilization of state-of-the-art technologies like Bootstrap, HTML5, Figma, Invision, Dreamweaver, PhotoShop, XD, etc., our expert pool of website designers and developers are keen to offer striking and robust designs, each having a class of its own. Our skilled UI UX designers ensure SEO-friendly designs as per the search engine guidelines.
+                </p>
+                <a href="{{ url_for('contact') }}">
+                    <button class="intro-btn">
+                        Hire a UI/UX Designer
+                    </button>
+                </a>
+            </div>
+            <div class="intro-img">
+                <img src="{{ url_for('static', filename='landing/ui.png') }}" />
+            </div>
+        </div>
+    </div>
+
+    <div class="services-benefits">
+        <div class="benefit-intro">
+            <h2>
+                Professional UI UX Design Services
+            </h2>
+            <p>
+                Fortress Data And Analytics' xperienced team of design experts possess over a decade of expertise in responsive web design, product design, brand identity and maintenance with a complete focus on user-friendliness and value addition. From startups to established enterprises and from a simple logo to complete brand maintenance, we help clients thrive with affordable, interactive, and eye-catchy modern designs.
+            </p>
+        </div>
+        </div>
+    </div>
+    
+   <div class="services-content">
+        <div class="intro-cont">
+                <h2>
+                    Steps to Hire Dedicated Developers from Fortress Data And Analytics
+                </h2>
+        </div>
+        <div class="main-cont">
+            <div class="contents left">
+                <h3>
+                    <img src="{{ url_for('static', filename='services/hire_1.png') }}" alt="">
+                    Post Your Inquiry
+                </h3>
+
+            </div>
+            <div class="contents right">
+                <h3>
+                    <img src="{{ url_for('static', filename='services/hire_4.png') }}" alt="">
+     
+                    Interview
+                </h3>
+            </div>
+            <div class="contents left">
+                <h3>
+                    <img src="{{ url_for('static', filename='services/hire_3.png') }}" alt="">
+
+                    Engagement Terms
+                </h3>
+            </div>
+            <div class="contents right">
+                <h3>
+                    <img src="{{ url_for('static', filename='services/hire_2.png') }}" alt="">
+
+                    Get Started
+                </h3>
+            </div>
+        </div>
+   </div>
+
+    <div class="services-contact">
+        <img src="{{ url_for('static', filename='services/Project_With_Us_graphic.png') }}" alt="">
+        <h2>
+            Hire UI UX Designer - To Incorporate Trendy Designs
+        </h2>
+        <p>
+            Our UI/UX designers have years of proficiency in selecting the best of designs that match your expectations, suit your requirements, and are trendy, modern, and secure.
+        </p>
+        <a href="{{ url_for('contact') }}">
+            <button>
+                Hire UI/UX Designers
+            </button>  
+        </a>  
+    </div>
+
+    <div class="services-ind">
+        <h2>
+            Solutions for Industries
+        </h2>
+        <div class="ind-cont">
+            <div class="contents">
+                <img src="{{ url_for('static', filename='industries/fitness.png') }}">
+                <h5>
+                    Fitness
+                </h5>
+            </div>
+            <div class="contents">
+                <img src="{{ url_for('static', filename='industries/fintech.png') }}">
+                <h5>
+                    Fintech
+                </h5>
+            </div>
+            <div class="contents">
+                <img src="{{ url_for('static', filename='industries/education.png') }}">
+                <h5>
+                    Education
+                </h5>
+            </div>
+            <div class="contents">
+                <img src="{{ url_for('static', filename='industries/healthcareicon.png') }}">
+                <h5>
+                    Healthcare
+                </h5>
+            </div>
+            <div class="contents">
+                <img src="{{ url_for('static', filename='industries/energy-and-utilities.png') }}">
+                <h5>
+                    Energy & Utilities
+                </h5>
+            </div>
+            <div class="contents">
+                <img src="{{ url_for('static', filename='industries/travel-and-hospitality.png') }}">
+                <h5>
+                    Travel & Hospitality
+                </h5>
+            </div>
+            <div class="contents">
+                <img src="{{ url_for('static', filename='industries/manufacturing.png') }}">
+                <h5>
+                    Manufacturing
+                </h5>
+            </div>
+            <div class="contents">
+                <img src="{{ url_for('static', filename='industries/advertising.png') }}">
+                <h5>
+                    Advertising
+                </h5>
+            </div>
+            <div class="contents">
+                <img src="{{ url_for('static', filename='industries/retail.png') }}">
+                <h5>
+                    Retail
+                </h5>
+            </div>
+            <div class="contents">
+                <img src="{{ url_for('static', filename='industries/media-and-entertainment.png') }}">
+                <h5>
+                    Media & Entertainment
+                </h5>
+            </div>
+            <div class="contents">
+                <img src="{{ url_for('static', filename='industries/logistics.png') }}">
+                <h5>
+                    Supply Chain And Logistics
+                </h5>
+            </div>
+            <div class="contents">
+                <img src="{{ url_for('static', filename='industries/life-sciences.png') }}" alt="">
+                <h5>
+                    Life Science
+                </h5>
+            </div>      
+        </div>
+    </div>
+</main>
+{% endblock %}

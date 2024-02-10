@@ -1,7 +1,8 @@
 {% extends 'base.html' %}
+{% block title %}Fortress Data And Analytics{% endblock %}
 {% block content %}
 <main>
-    <div class="carousel parallax-section">
+    <div class="carousel">
         <h1>Fortress Data And Analytics</h1>
         <h2>Our Services</h2>
         <div class="list">
@@ -159,7 +160,8 @@
             <button id="next">></button>
         </div>
     </div>
-    <div class="some-about parallax-section">
+
+    <div class="some-about">
         <div class="heading">
             <h2>Pioneering Precision in Advanced Data Analytics Solutions</h2>
         </div>
@@ -167,7 +169,53 @@
             <p>We specialize in leveraging advanced technologies for business transformation, delivering tailored, resilient, and secure software solutions. Our customized approach reinvents business models, accelerates innovation, and strategically plans digital growth, fostering business agility."</p>
         </div>
     </div>
-    <div class="technologies parallax-section">
+    <div class="bs-brief">
+        <h2>
+            Bussiness Solution
+        </h2>
+        <div class="bs-brief-cont">
+            <div class="content">
+                <h3>
+                    Enterprise Resource Planning(ERPs)
+                </h3>
+                <p>
+                    Integrated software platforms that manage core business processes (finance, HR, supply chain, etc.). ERPs centralize data, improve collaboration, and enable informed decisions.
+                </p>
+                <a href="{{ url_for('erp') }}">
+                    <button>
+                        See More
+                    </button>
+                </a>
+            </div>
+            <div class="content">
+                <h3>
+                    Customer relationship management(CRMs)
+                </h3>
+                <p>
+                    Software for managing customer interactions. CRM systems streamline sales, enhance marketing, and improve customer service by automating tasks and centralizing data.
+                </p>
+                <a href="{{ url_for('crm') }}">
+                    <button>
+                        See More
+                    </button>
+                </a>
+            </div>
+            <div class="content center">
+                <h3>
+                    Mobile Sales Force Automation(SFAs)
+                </h3>
+                <p>
+                    A component of CRM systems focused on automating sales activities. SFA tools optimize lead management, opportunity tracking, and sales forecasting, improving sales team efficiency and performance.
+                </p>
+                <a href="{{ url_for('sfa') }}">
+                    <button>
+                        See More
+                    </button>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="technologies">
         <h2>Technologies</h2>
         <div class="buttons">
             <button onclick="showContent('language')" data-tech="language">Backend</button>
@@ -299,155 +347,317 @@
             </div>
         </div>
     </div>
-    <div class="bs-sol-head parallax-section">
+    <div class="ind-color">
+        <div class="bs-sol-head">
+            <h1>
+                Industries We Serve.
+            </h1>
+        </div>
+        <div class="aligning">
+            <div class="bussiness-sol">
+                <div class="slides">
+                    <input type="radio" name="radio-btn" id="radio1">
+                    <input type="radio" name="radio-btn" id="radio2">
+                    <input type="radio" name="radio-btn" id="radio3">
+                    <input type="radio" name="radio-btn" id="radio4">
+                    <input type="radio" name="radio-btn" id="radio5">
+                    <input type="radio" name="radio-btn" id="radio6">
+                    <input type="radio" name="radio-btn" id="radio7">
+        
+                    <div class="manufacturing slide first">
+                        <div class="image">
+                            <div class="man-img">
+                                <img src="{{ url_for('static', filename='industries/manufacturing.jpg') }}" width="400" />
+                            </div>
+                            <div class="man-content">
+                                <h3>Manufacturing</h3>
+                                <strong>Predictive Maintenance: </strong>
+                                <p>Use analytics to predict equipment failures and optimize maintenance schedules, reducing downtime.</p>
+                                <strong>Quality Control: </strong>
+                                <p>Analyze production data to identify defects, improve quality control, and enhance overall product quality.</p>
+                                <strong>Supply Chain Optimization: </strong>
+                                <p>Optimize inventory management, streamline supply chains, and improve overall operational efficiency.</p>            
+                            </div>
+                        </div>
+                    </div>
+                    <div class="healthcare slide">
+                        <div class="image">
+                            <div class="hea-img">
+                                <img src="{{ url_for('static', filename='industries/healthcare.png') }}" width="400" />
+                            </div>
+                            <div class="hea-content">
+                                <h3>Healthcare</h3>
+                                <strong>Predictive Analytics for Patient Outcomes: </strong>
+                                <p>Predict patient outcomes and identify potential health issues through data analysis of patient records.</p>
+                                <strong>Fraud Detection: </strong>
+                                <p>Use analytics to identify fraudulent activities in healthcare insurance claims.</p>
+                                <strong>Clinical Research: </strong> 
+                                <p>Analyze large datasets to identify trends, patterns, and potential breakthroughs in medical research.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="automobile slide">
+                        <div class="image">
+                            <div class="auto-img">
+                                <img src="{{ url_for('static', filename='industries/automobile.jpg') }}" width="400" />
+                            </div>
+                            <div class="auto-content">
+                                <h3>Automotive</h3>
+                                <strong>Predictive Maintenance for Vehicles: </strong>
+                                <p> Predict maintenance needs for vehicles based on sensor data, reducing unexpected breakdowns.</p>
+                                <strong>Supply Chain Optimization: </strong>
+                                <p>Optimize the automotive supply chain for improved efficiency and cost-effectiveness.</p>
+                                <strong>Customer Insights: </strong> 
+                                <p>Analyze customer data for insights into preferences, buying behavior, and satisfaction.</p>           
+                            </div>
+                        </div>
+                    </div>
+                    <div class="banking slide">
+                        <div class="image">
+                            <div class="bank-img">
+                                <img src="{{ url_for('static', filename='industries/banking.jpg') }}" width="400" />
+                            </div>
+                            <div class="bank-content">
+                                <h3>Banking</h3>
+                                <strong>Fraud Detection: </strong>
+                                <p> Use analytics to detect and prevent fraudulent transactions and activities.</p>
+                                <strong>Credit Scoring: </strong>
+                                <p>Assess credit risk by analyzing customer data to make informed lending decisions.</p>
+                                <strong>Customer Segmentation: </strong> 
+                                <p>Analyze customer behavior to create targeted marketing strategies and personalized banking experiences.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="logistics slide">
+                        <div class="image">
+                            <div class="logi-img">
+                                <img src="{{ url_for('static', filename='industries/logistics.jpg') }}" width="400" />
+                            </div>
+                            <div class="logi-content">
+                                <h3>Logistics</h3>
+                                <strong>Route Optimization: </strong>
+                                <p>Optimize delivery routes and schedules for logistics companies to improve efficiency.</p>
+                                <strong>Inventory Management: </strong>
+                                <p>Use analytics to manage and optimize inventory levels, reducing carrying costs.</p>
+                                <strong>Demand Forecasting: </strong> 
+                                <p>Predict demand patterns to optimize supply chain processes.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="insurance slide">
+                        <div class="image">
+                            <div class="insure-img">
+                                <img src="{{ url_for('static', filename='industries/insurance.jpg') }}" width="400" />
+                            </div>
+                            <div class="insure-content">
+                                <h3>Insurance</h3>
+                                <strong>Underwriting: </strong>
+                                <p>Use data analytics to assess risk and determine insurance premiums.</p>
+                                <strong>Claims Processing: </strong>
+                                <p>Streamline claims processing through data analysis, reducing fraud and improving efficiency..</p>
+                                <strong>Customer Segmentation: </strong> 
+                                <p>Analyze customer data to create targeted insurance products and marketing strategies.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="capital-markets slide">
+                        <div class="image">
+                            <div class="capital-img">
+                                <img src="{{ url_for('static', filename='industries/capital_markets.jpg') }}" width="400"/>
+                            </div>
+                            <div class="capital-content">
+                                <h3>Capital Markets</h3>
+                                <strong>Algorithmic Trading: </strong>
+                                <p>Use algorithms and data analysis to make high-frequency trading decisions.</p>
+                                <strong>Risk Management: </strong>
+                                <p>Analyze market and portfolio data to assess and manage investment risks.</p>
+                                <strong>Market Forecasting: </strong> 
+                                <p>Utilize data analytics to predict market trends and make informed investment decisions.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="navigation-auto">
+                        <div class="auto-btn1"></div>
+                        <div class="auto-btn2"></div>
+                        <div class="auto-btn3"></div>
+                        <div class="auto-btn4"></div>
+                        <div class="auto-btn5"></div>
+                        <div class="auto-btn6"></div>
+                        <div class="auto-btn7"></div>
+                    </div>
+                </div>
+                <div class="navigation-manual">
+                    <label for="radio1" class="manual-btn"></label>
+                    <label for="radio2" class="manual-btn"></label>
+                    <label for="radio3" class="manual-btn"></label>
+                    <label for="radio4" class="manual-btn"></label>
+                    <label for="radio5" class="manual-btn"></label>
+                    <label for="radio6" class="manual-btn"></label>
+                    <label for="radio7" class="manual-btn"></label>
+        
+                </div> 
+            </div>
+        </div>
+    </div>
+
+    <div class="services-ind">
+        <h2>
+            Industries We Serve
+        </h2>
+        <div class="ind-cont">
+            <div class="contents">
+                <a href="{{ url_for('fitness') }}">
+                    <img src="{{ url_for('static', filename='industries/fitness.png') }}">
+                    <h5>
+                        Fitness
+                    </h5>
+                </a>
+            </div>
+            <div class="contents">
+                <a href="{{ url_for('fintech') }}">
+                    <img src="{{ url_for('static', filename='industries/fintech.png') }}">
+                    <h5>
+                        Fintech
+                    </h5>
+                </a>
+            </div>
+            <div class="contents">
+                <a href="{{ url_for('education') }}">
+                    <img src="{{ url_for('static', filename='industries/education.png') }}">
+                    <h5>
+                        Education
+                    </h5>
+                </a>
+            </div>
+            <div class="contents">
+                <a href="{{ url_for('healthcare') }}">
+                    <img src="{{ url_for('static', filename='industries/healthcareicon.png') }}">
+                    <h5>
+                        Healthcare
+                    </h5>
+                </a>
+            </div>
+            <div class="contents">
+                <a href="{{ url_for('energy') }}">
+                    <img src="{{ url_for('static', filename='industries/energy-and-utilities.png') }}">
+                    <h5>
+                        Energy & Utilities
+                    </h5>
+                </a>
+            </div>
+            <div class="contents">
+                <a href="{{ url_for('travel') }}">
+                    <img src="{{ url_for('static', filename='industries/travel-and-hospitality.png') }}">
+                    <h5>
+                        Travel & Hospitality
+                    </h5>
+                </a>
+            </div>
+            <div class="contents">
+                <a href="{{ url_for('manufacturing') }}">
+                    <img src="{{ url_for('static', filename='industries/manufacturing.png') }}">
+                    <h5>
+                        Manufacturing
+                    </h5>
+                </a>
+            </div>
+            <div class="contents">
+                <a href="{{ url_for('adverts') }}">
+                    <img src="{{ url_for('static', filename='industries/advertising.png') }}">
+                    <h5>
+                        Advertising
+                    </h5>
+                </a>
+            </div>
+            <div class="contents">
+                <a href="{{ url_for('retail') }}">
+                    <img src="{{ url_for('static', filename='industries/retail.png') }}">
+                    <h5>
+                        Retail
+                    </h5>
+                </a>
+            </div>
+            <div class="contents">
+                <a href="{{ url_for('entertain') }}">
+                    <img src="{{ url_for('static', filename='industries/media-and-entertainment.png') }}">
+                        <h5>
+                            Media & Entertainment
+                        </h5>
+                    </a>
+            </div>
+
+            <div class="contents">
+                <a href="{{ url_for('supplychain') }}">
+                    <img src="{{ url_for('static', filename='industries/logistics.png') }}">
+                    <h5>
+                        Supply Chain And Logistics
+                    </h5>
+                </a>
+            </div>
+            <div class="contents">
+                <a href="{{ url_for('travel') }}">
+                    <img src="{{ url_for('static', filename='industries/life-sciences.png') }}" alt="">
+                    <h5>
+                        Life Science
+                    </h5>
+                </a>
+            </div>  
+        </div>
+    </div>
+
+    <div class="home-about-title">
         <h1>
-            Industries We Serve.
+            About Us
         </h1>
     </div>
-    <div class="aligning">
-        <div class="bussiness-sol parallax-section">
-            <div class="slides">
-                <input type="radio" name="radio-btn" id="radio1">
-                <input type="radio" name="radio-btn" id="radio2">
-                <input type="radio" name="radio-btn" id="radio3">
-                <input type="radio" name="radio-btn" id="radio4">
-                <input type="radio" name="radio-btn" id="radio5">
-                <input type="radio" name="radio-btn" id="radio6">
-                <input type="radio" name="radio-btn" id="radio7">
-    
-                <div class="manufacturing slide first">
-                    <div class="image">
-                        <div class="man-img">
-                            <img src="{{ url_for('static', filename='industries/manufacturing.jpg') }}" width="400" />
-                        </div>
-                        <div class="man-content">
-                            <h3>Manufacturing</h3>
-                            <strong>Predictive Maintenance: </strong>
-                            <p>Use analytics to predict equipment failures and optimize maintenance schedules, reducing downtime.</p>
-                            <strong>Quality Control: </strong>
-                            <p>Analyze production data to identify defects, improve quality control, and enhance overall product quality.</p>
-                            <strong>Supply Chain Optimization: </strong>
-                            <p>Optimize inventory management, streamline supply chains, and improve overall operational efficiency.</p>            
-                        </div>
-                    </div>
-                </div>
-                <div class="healthcare slide">
-                    <div class="image">
-                        <div class="hea-img">
-                            <img src="{{ url_for('static', filename='industries/healthcare.png') }}" width="400" />
-                        </div>
-                        <div class="hea-content">
-                            <h3>Healthcare</h3>
-                            <strong>Predictive Analytics for Patient Outcomes: </strong>
-                            <p>Predict patient outcomes and identify potential health issues through data analysis of patient records.</p>
-                            <strong>Fraud Detection: </strong>
-                            <p>Use analytics to identify fraudulent activities in healthcare insurance claims.</p>
-                            <strong>Clinical Research: </strong> 
-                            <p>Analyze large datasets to identify trends, patterns, and potential breakthroughs in medical research.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="automobile slide">
-                    <div class="image">
-                        <div class="auto-img">
-                            <img src="{{ url_for('static', filename='industries/automobile.jpg') }}" width="400" />
-                        </div>
-                        <div class="auto-content">
-                            <h3>Automotive</h3>
-                            <strong>Predictive Maintenance for Vehicles: </strong>
-                            <p> Predict maintenance needs for vehicles based on sensor data, reducing unexpected breakdowns.</p>
-                            <strong>Supply Chain Optimization: </strong>
-                            <p>Optimize the automotive supply chain for improved efficiency and cost-effectiveness.</p>
-                            <strong>Customer Insights: </strong> 
-                            <p>Analyze customer data for insights into preferences, buying behavior, and satisfaction.</p>           
-                        </div>
-                    </div>
-                </div>
-                <div class="banking slide">
-                    <div class="image">
-                        <div class="bank-img">
-                            <img src="{{ url_for('static', filename='industries/banking.jpg') }}" width="400" />
-                        </div>
-                        <div class="bank-content">
-                            <h3>Banking</h3>
-                            <strong>Fraud Detection: </strong>
-                            <p> Use analytics to detect and prevent fraudulent transactions and activities.</p>
-                            <strong>Credit Scoring: </strong>
-                            <p>Assess credit risk by analyzing customer data to make informed lending decisions.</p>
-                            <strong>Customer Segmentation: </strong> 
-                            <p>Analyze customer behavior to create targeted marketing strategies and personalized banking experiences.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="logistics slide">
-                    <div class="image">
-                        <div class="logi-img">
-                            <img src="{{ url_for('static', filename='industries/logistics.jpg') }}" width="400" />
-                        </div>
-                        <div class="logi-content">
-                            <h3>Logistics</h3>
-                            <strong>Route Optimization: </strong>
-                            <p>Optimize delivery routes and schedules for logistics companies to improve efficiency.</p>
-                            <strong>Inventory Management: </strong>
-                            <p>Use analytics to manage and optimize inventory levels, reducing carrying costs.</p>
-                            <strong>Demand Forecasting: </strong> 
-                            <p>Predict demand patterns to optimize supply chain processes.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="insurance slide">
-                    <div class="image">
-                        <div class="insure-img">
-                            <img src="{{ url_for('static', filename='industries/insurance.jpg') }}" width="400" />
-                        </div>
-                        <div class="insure-content">
-                            <h3>Insurance</h3>
-                            <strong>Underwriting: </strong>
-                            <p>Use data analytics to assess risk and determine insurance premiums.</p>
-                            <strong>Claims Processing: </strong>
-                            <p>Streamline claims processing through data analysis, reducing fraud and improving efficiency..</p>
-                            <strong>Customer Segmentation: </strong> 
-                            <p>Analyze customer data to create targeted insurance products and marketing strategies.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="capital-markets slide">
-                    <div class="image">
-                        <div class="capital-img">
-                            <img src="{{ url_for('static', filename='industries/capital_markets.jpg') }}" width="400"/>
-                        </div>
-                        <div class="capital-content">
-                            <h3>Capital Markets</h3>
-                            <strong>Algorithmic Trading: </strong>
-                            <p>Use algorithms and data analysis to make high-frequency trading decisions.</p>
-                            <strong>Risk Management: </strong>
-                            <p>Analyze market and portfolio data to assess and manage investment risks.</p>
-                            <strong>Market Forecasting: </strong> 
-                            <p>Utilize data analytics to predict market trends and make informed investment decisions.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="navigation-auto">
-                    <div class="auto-btn1"></div>
-                    <div class="auto-btn2"></div>
-                    <div class="auto-btn3"></div>
-                    <div class="auto-btn4"></div>
-                    <div class="auto-btn5"></div>
-                    <div class="auto-btn6"></div>
-                    <div class="auto-btn7"></div>
-                </div>
-            </div>
-            <div class="navigation-manual">
-                <label for="radio1" class="manual-btn"></label>
-                <label for="radio2" class="manual-btn"></label>
-                <label for="radio3" class="manual-btn"></label>
-                <label for="radio4" class="manual-btn"></label>
-                <label for="radio5" class="manual-btn"></label>
-                <label for="radio6" class="manual-btn"></label>
-                <label for="radio7" class="manual-btn"></label>
-    
-            </div> 
+
+    <div class="home-about">
+        <img src="{{ url_for('static', filename='about/ourteam.png') }}" alt="">
+        <div class="team-home">
+            <h3>Our Team</h3>
+            <p>At Fortress Data And Analytics, innovation drives everything we do. Our diverse team of passionate individuals brings together unique talents and perspectives, united by a common goal: to revolutionize the tech industry. With a focus on collaboration, creativity, and cutting-edge solutions, we tackle challenges head-on, pushing boundaries and paving the way for a brighter, more connected future.</p>
+                <a href="{{ url_for('contact') }}">
+                    <button>
+                        Contact Us
+                    </button>
+                </a>
         </div>
+    
+        <div class="mission">
+            <h3>Our Mission</h3>
+            <p>We develop data analytics and machine learning solutions by aggregating disparate data sources to bring creativity and innovation in the management of any business.</p>
+        </div>
+    
+        <div class="vision">
+            <h3>Our Vision</h3>
+            <p>To become the most valuable data analytics partner in Africa and beyond.</p>
+        </div>
+    
+        <div class="why">
+            <h3>Why choose to work with us?</h3>
+            <p>The emergence of efficient technology solutions has provided an opportunity for companies to rethink the way traditional decisions are made.</p>
+            <a href="{{ url_for('team') }}">
+                <button>
+                    Find out More
+                </button>
+            </a>
+       </div>
+    </div>
+    
+
+    <div class="services-contact">
+        <img src="{{ url_for('static', filename='services/Project_With_Us_graphic.png') }}" alt="">
+        <h2>
+            Talk To Us
+        </h2>
+        <p>
+            Our dedicated business consultants help startups, mid-sized, and enterprise businesses unlock the power of data to make better business decisions.
+        </p>
+        <a href="{{ url_for('contact') }}">
+            <button>
+                Lets Discuss Your Project
+            </button>  
+        </a>  
     </div>
     
     <!-- <div class="process">
@@ -605,21 +815,28 @@
         }
     });
 </script>
-<script>
+
+<!-- <script>
     window.addEventListener('scroll', function() {
-    // Get the scroll value
-    const scrollValue = window.scrollY;
-    
-    // Iterate over each parallax section
-    document.querySelectorAll('.parallax-section').forEach(function(section) {
-        // Calculate the new position of the section based on the scroll value
-        const newPosition = -scrollValue * 0.5 + 'px';
-        // Set the new position for the section
-        section.style.transform = 'translateY(' + newPosition + ')';
+        var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        var div2 = document.querySelector('.some-about');
+        var div3 = document.querySelector('.technologies');
+        var div4 = document.querySelector('.ind-color');
+        var div5 = document.querySelector('.footer')
+        var speed = 0.5; // Adjust the speed of the parallax effect
+
+        // Calculate the new position of div2 and div3 based on the scroll position
+        var newPosition2 = -scrollTop * speed;
+        var newPosition3 = -scrollTop * (speed * 1.1);
+        var newPosition4 = -scrollTop * (speed * 1.3);
+        var newPosition5 = -scrollTop * (speed);
+
+        // Apply the transform to the elements
+        div2.style.transform = 'translateY(' + newPosition2 + 'px)';
+        div3.style.transform = 'translateY(' + newPosition3 + 'px)';
+        div4.style.transform = 'translateY(' + newPosition4 + 'px)';
+        div5.style.transform = 'translateY(' + newPosition5 + 'px)';
     });
-});
-</script>
-
-
+</script> -->
 
 {% endblock %}

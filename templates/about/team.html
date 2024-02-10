@@ -1,6 +1,5 @@
 {% extends "base.html" %}
 {% block content %}
-{% include 'nav.html' %}
 <div class="about-head">
     <h1>
         About Us
@@ -8,7 +7,7 @@
 </div>
 <div class="about-team">
     <div class="about-list">
-        <div class="team">
+        <div class="team ceo">
             <img src="{{ url_for('static', filename='about/ceo.png') }}"/>
             <div class="intro">
                 <div class="team-content">
@@ -23,12 +22,12 @@
                         </p>
                     </div>
                     <div class="get-started">
-                        <button><a href="{{ url_for('contact') }}">Get Started</a></button>
+                        <a href="{{ url_for('contact') }}"><button>Get Started</button></a>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="team">
+        <div class="team our">
             <img src="{{ url_for('static', filename='about/team.png') }}"/>
            <div class="intro">
             <div class="team-content">
@@ -41,14 +40,19 @@
                     <p>
                         Collaborative minds driving data excellence. Our diverse team synergizes analytics prowess, transforming raw data into actionable insights. Together, we redefine possibilities in the data landscape.
                     </p>
+                    <p>
+                        We are located at Empress Towers, Lipro Office Suites, Jalaram Rd
+                    </p>
                 </div>
                 <div class="get-started">
-                    <button><a href="{{ url_for('contact') }}">Get Started</a></button>
+                    <a href="https://www.google.com/maps/place/Fortress+Data+and+Analytics/@-1.2581639,36.8036771,17z/data=!3m1!4b1!4m6!3m5!1s0x182f1711b717afcd:0x2711a49b1cd18c1d!8m2!3d-1.2581639!4d36.806252!16s%2Fg%2F11t1lq6v7f?entry=ttu"><img src="{{ url_for('static', filename='maps.png') }}" alt=""></a>
                 </div>
+
             </div>
            </div>
-        </div>
+        </div>                
     </div>
+
     <div class="team-arrow">
         <button id="team-prev"><</button>
         <button id="team-next">></button>

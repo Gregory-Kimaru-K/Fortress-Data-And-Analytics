@@ -42,13 +42,19 @@
 
 .dropdown-serv,
 .dropdown-abt,
-.dropdown-tech {
+.dropdown-tech,
+.dropdown-ind,
+.dropdown-sol,
+.dropdown-hire {
     position: relative;
 }
 
 .dropdown-serv .dropbtn:hover,
 .dropdown-abt .dropbtn:hover,
-.dropdown-tech .dropbtn:hover {
+.dropdown-tech .dropbtn:hover,
+.dropdown-ind .dropbtn:hover,
+.dropdown-sol .dropbtn:hover,
+.dropdown-hire .dropbtn:hover {
     font-size: 17px;
     color: aqua;
 }
@@ -56,7 +62,10 @@
 
 .dropdown-serv .dropbtn,
 .dropdown-abt .dropbtn,
-.dropdown-tech .dropbtn {
+.dropdown-tech .dropbtn,
+.dropdown-ind .dropbtn,
+.dropdown-sol .dropbtn,
+.dropdown-hire .dropbtn {
     border: none;
     background-color: transparent;
     outline: none;
@@ -72,7 +81,10 @@
 
 .dropdown-serv .dropdown-serv-content,
 .dropdown-abt .dropdown-abt-content,
-.dropdown-tech .dropdown-tech-content{
+.dropdown-tech .dropdown-tech-content,
+.dropdown-ind .dropdown-ind-content,
+.dropdown-sol .dropdown-sol-content,
+.dropdown-hire .dropdown-hire-content {
     display: none;
     position: absolute;
     background-color: #00b7eb;
@@ -85,7 +97,10 @@
 
 .dropdown-serv .dropdown-serv-content a,
 .dropdown-abt .dropdown-abt-content a,
-.dropdown-tech .dropdown-tech-content a {
+.dropdown-tech .dropdown-tech-content a,
+.dropdown-ind .dropdown-ind-content a,
+.dropdown-sol .dropdown-sol-content a,
+.dropdown-hire .dropdown-hire-content a {
     color: #fff;
     padding: 10px;
     text-decoration: none;
@@ -95,14 +110,24 @@
 
 .dropdown-serv .dropdown-serv-content a:hover,
 .dropdown-abt .dropdown-abt-content a:hover,
-.dropdown-tech .dropdown-tech-content a:hover {
+.dropdown-tech .dropdown-tech-content a:hover,
+.dropdown-ind .dropdown-ind-content a:hover,
+.dropdown-sol .dropdown-sol-content a:hover,
+.dropdown-hire .dropdown-hire-content a:hover {
     background-color: aqua;
 }
 
 .dropdown-serv:hover .dropdown-serv-content,
 .dropdown-abt:hover .dropdown-abt-content,
-.dropdown-tech:hover .dropdown-tech-content {
+.dropdown-tech:hover .dropdown-tech-content,
+.dropdown-ind:hover .dropdown-ind-content,
+.dropdown-sol:hover .dropdown-sol-content,
+.dropdown-hire:hover .dropdown-hire-content {
     display: block;
+}
+
+.dropdown-serv .dropdown-serv-content {
+    left: -200%;
 }
 
 .dropdown-abt .dropdown-abt-content {
@@ -110,7 +135,19 @@
 }
 
 .dropdown-tech .dropdown-tech-content {
-    left: -150%;
+    left: -100%;
+}
+
+.dropdown-ind .dropdown-ind-content {
+    left: -100%;
+}
+
+.dropdown-sol .dropdown-sol-content {
+    left: -50%;
+}
+
+.dropdown-hire .dropdown-hire-content {
+    left: -200%;
 }
 
 .header .mobile-menu div {
@@ -168,15 +205,18 @@ span #dark-mode-icon {
         position: absolute;
         width: 100%;
         z-index: 20;
-        background-color: black;
+        background-color: #00b7eb;
         top: 60px;
     }
 
     .navbar a,
     .navbar .dropdown-serv,
     .navbar .dropdown-abt,
-    .navbar .dropdown-tech {
-        background-color: #000;
+    .navbar .dropdown-tech,
+    .navbar .dropdown-ind,
+    .navbar .dropdown-sol,
+    .navbar .dropdown-hire {
+        background-color: #00b7eb;
         padding: 15px;
         text-decoration: none;
         color: white;
@@ -185,14 +225,18 @@ span #dark-mode-icon {
 
     .dropdown-serv .dropbtn,
     .dropdown-abt .dropbtn,
-    .dropdown-tech .dropbtn {
+    .dropdown-tech .dropbtn,
+    .dropdown-sol .dropbtn,
+    .dropdown-hire .dropbtn {
         width: 100%;
         margin-right: 0;
     }
 
     .dropdown-serv .dropdown-serv-content a,
     .dropdown-abt .dropdown-abt-content a,
-    .dropdown-tech .dropdown-abt-content a {
+    .dropdown-tech .dropdown-abt-content a,
+    .dropdown-sol .dropdown-sol-content a,
+    .dropdown-hire .dropdown-hire-content a {
         width: 100%;
         box-sizing: border-box;
     }
@@ -213,7 +257,9 @@ span #dark-mode-icon {
 
     .dropdown-serv:active .dropdown-serv-content,
     .dropdown-abt:active .dropdown-abt-content,
-    .dropdown-tech:active .dropdown-tech-content {
+    .dropdown-tech:active .dropdown-tech-content,
+    .dropdown-sol:active .dropdown-sol-content,
+    .dropdown-hire:active .dropdown-hire-content {
             display: block;
     }
 
@@ -225,24 +271,11 @@ span #dark-mode-icon {
     .dropdown-tech .dropdown-tech-content {
         left: -50%;
     }
-}
 
-.dark-mode .header {
-    background-color: #000;
-    color: #fff;
-}
-
-.dark-mode .dropdown-serv .dropdown-serv-content,
-.dark-mode .dropdown-abt .dropdown-abt-content,
-.dark-mode .dropdown-tech .dropdown-tech-content{
-    background-color: #333;
-}
-
-.dark-mode body {
-    background-color: #000; 
-    color: #fff; 
-}
-
-.dark-mode #base-body {
-    background-color: #000;
+    .dropdown-ind .dropdown-ind-content,
+    .dropdown-hire .dropdown-hire-content {
+        left: -50%;
+        max-height: 250px;
+        overflow-y: auto;
+    }
 }

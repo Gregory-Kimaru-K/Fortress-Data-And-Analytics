@@ -1,0 +1,191 @@
+{% extends 'base.html' %}
+{% block content %}
+<main class="ind">
+    <div class="flex-intro">
+        <div class="ind-head">
+            <h1>
+                Fitness App Development
+            </h1>
+            <p>
+                We specialize in innovative fitness app development for comprehensive health and wellness, catering to health enthusiasts. Our skilled solution experts possess domain-specific knowledge in digital fitness, addressing the complexities of the industry. We offer a wide range of fitness app development services, including various types of software applications that enhance business prospects, profitability, and client reach.
+            </p>
+            <a href="{{ url_for('contact') }}">
+                <button>
+                    Transform Your Fitness Regime
+                </button>
+            </a>
+        </div>
+        <img src="{{ url_for('static', filename='industrial/fit.png') }}" alt="">
+    </div>
+    <div class="ind-sol">
+        <div class="ind-sol-intro">
+            <h2>
+                Our Comprehensive Fitness App Development Services
+            </h2>
+            <p>
+                Our fitness app developers assist industry-driven enterprises, SMBs, and startups in digitizing their business workflows in the health and fitness arena, resulting in enhanced return on investment, community involvement, and user empowerment.
+            </p>
+        </div>
+        <div class="ind-sol-main">
+            <div class="content left">
+                <h3>
+                    Fitness and Activity Tracking App
+                </h3>
+                <p>
+                    Apps that manage major fitness-related activities like fitness schedules, remote training, calorie counting, activity tracking, social fitness, workout tracking, and progress measurement.
+                </p>
+            </div>
+            <div class="content center">
+                <h3>
+                    Mental Relaxation Mobile App
+                </h3>
+                <p>
+                    Specifically designed for rejuvenating mental health, meditation, relaxation techniques, relaxation music, daily audio sessions, destress management, audio streaming/trimming, social media integration, and motivational surveys.
+                </p>
+            </div>
+            <div class="content right">
+                <h3>
+                    Wearable Fitness App
+                </h3>
+                <p>
+                    Seamlessly connects with wearable devices to monitor users' health statistics and provide appropriate advice. Track workouts and monitor fitness on the go with interactive, goal-based fitness apps through wearables.
+                </p>
+            </div>
+            <div class="content left">
+                <h3>
+                    Diet and Nutrition App
+                </h3>
+                <p>
+                    Includes meal tracking, recipes, meal plans, nutrition store, food database, calorie tracking, user subscriptions to meals/nutrition charts/consultations, and daily monitoring of diet plans and supplements.
+                </p>
+            </div>
+            <div class="content center">
+                <h3>
+                    Yoga and Exercise App
+                </h3>
+                <p>
+                    Tracks calorie intake/output, workouts, fitness status with integration, day-wise statistics of different exercises, and progress in terms of start weight, goal weight, and current weight.
+                </p>
+            </div>
+            <div class="content right">
+                <h3>
+                    Fitness Trainer App
+                </h3>
+                <p>
+                    Includes program registrations, user subscriptions, remote training, subscription models for training and support, fitness community support, home training plans, BMI calculation, training content, etc.
+                </p>
+            </div>
+            
+        </div>
+    </div>
+    <div class="ind-contact">
+        <img src="{{ url_for('static', filename='contact/hire.png') }}" alt="">
+        <h2>
+            Stay Healthy and Fit with Our Cutting-edge Fitness App Development Services
+        </h2>
+        <p>
+            We aim to serve a global clientele in the health and fitness industry, whether small, medium, or large organizations, enterprises, or startups. Our competent fitness app developers ensure that our solutions are a step ahead of the competition.
+        </p>
+        <a href="{{ url_for('contact') }}">
+            <button>
+                Let's Connect
+            </button>
+        </a>
+    </div>
+    <div class="ind-benefits">
+        <h2>
+            Fitness App Development Features and Functionalities
+        </h2>
+        <div class="ind-benefits-cont">
+
+            <div class="benefit">
+                <h3>Wearable Integrations</h3>
+                <p>
+                    Our fitness apps seamlessly connect with a range of wearable devices like smartwatches and fitness bands for real-time fitness statistics. Users can easily control workout-related information on the go, with effective data capture for overall fitness results.
+                </p>
+            </div>
+            
+            <div class="benefit">
+                <h3>Personalized Planning</h3>
+                <p>
+                    Our apps offer personalized planning activities tailored to individual fitness and nutrition needs. Users can customize workouts, nutrition, exercises, diet schedules, and progress tracking based on their goals, fitness levels, and preferences.
+                </p>
+            </div>
+            
+            <div class="benefit">
+                <h3>Workout Audios and Videos</h3>
+                <p>
+                    Our apps provide a vast collection of workout audio and videos by industry experts, catering to various fitness and health genres. Users can access workout videos based on different body types and nutritional recipe videos for guidance.
+                </p>
+            </div>
+            
+            <div class="benefit">
+                <h3>Real-time Insights</h3>
+                <p>
+                    Fitness applications offer real-time information on calorie tracking, breakdown, macronutrients, workout planning, exercise tracking, nutrition intake, measurements, wearable device integration, goals, trackers, push notifications, and alarms, facilitating effective workout planning and nutritional management.
+                </p>
+            </div>
+            
+            <div class="benefit">
+                <h3>Fitness Data Analytics</h3>
+                <p>
+                    Data analytics in fitness apps help estimate the success of fitness regimes, exercises, nutrition charts, and personal training. Leveraging data from various activities through analytical methods provides optimal metrics for enhanced fitness results and informed business decisions.
+                </p>
+            </div>
+            
+            <div class="benefit">
+                <h3>AI-Powered Fitness Apps</h3>
+                <p>
+                    Artificial intelligence enhances fitness apps with automated features, precise motion tracking, performance assessment, real-time workout evaluation, and suitable suggestions. Our fitness app development incorporates AI-driven activities for improved user experience and tracking.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="ind-tech">
+        <h2>
+            Technologies and Platforms We Use
+        </h2>
+        <div class="tech-cont">
+            <div class="techy">
+                <img src="{{ url_for('static', filename='services/React-Logo.png') }}" alt="">
+                <p>React Native</p>
+            </div>
+            <div class="techy">
+                <img src="{{ url_for('static', filename='services/Flutter-Logo.png') }}" >
+                <p>Flutter</p>
+            </div>
+            <div class="techy">
+                <img src="{{ url_for('static', filename='services/hire-iOS-icon.png') }}" width="70">
+                <p>iOS</p>
+            </div>
+            <div class="techy">
+                <img src="{{ url_for('static', filename='services/hire-Android-icon.png') }}" width="70">
+                <p>Android</p>
+            </div>
+            <div class="techy">
+                <img src="{{ url_for('static', filename='services/Laravel-Logo.png') }}" alt="">
+                <p>Laravel</p>
+            </div>
+            <div class="techy">
+                <img src="{{ url_for('static', filename='services/Kotlin-Logo.png') }}" alt="">
+                <p>Kotlin</p>
+            </div>
+        </div>
+    </div>
+    <div class="ind-hire">
+        <img src=" {{ url_for('static', filename='contact/looking.png') }} " alt="">
+        <img src=" {{ url_for('static', filename='contact/looking2.png') }} " alt="">
+        <h2>
+            Your Comprehensive Fitness App Development Partner
+        </h2>
+        <p>
+            Prioritize your health and wellness with fitness interests, activity tracking, effective monitoring, expert tutorials, and precise nutrition and calorie calculation.
+        </p>
+        <a href="{{ url_for('contact') }}">
+            <button>
+                Connect With Us
+            </button>
+        </a>
+    </div>
+</main>
+{% endblock %}

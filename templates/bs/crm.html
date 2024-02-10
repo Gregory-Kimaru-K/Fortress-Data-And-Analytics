@@ -1,0 +1,294 @@
+{% extends 'base.html' %}
+{% block content %}
+<main class="bs">
+    <div class="bs-intro">
+        <div class="bs-intro-cont">
+            <h1>
+                Enterprise CRM Software
+            </h1>
+            <p>
+                Niche Customer Relationship Management Solutions – Enterprise CRM, Showcasing a Versatile Blend of Sales, Service, Marketing, and Satisfaction.
+            </p>
+            <a href="{{ url_for('contact') }}">
+                <button>
+                    Request a Demo
+                </button>
+            </a>
+        </div>
+        <img src="{{ url_for('static', filename='landing/crm.png') }}" alt="">
+    </div>
+   
+    <div class="something">
+        <h2>
+            Enterprise CRM Software
+        </h2>
+        <p>
+            There is a growing need for Mobile CRM Software, which is addressed by Fortress Data And Analytics' Customer Relationship Management software solutions, which have been successfully implemented in various domains and industries.
+        </p>
+        <p>
+            As an experienced CRM development company with a multi-faceted industry-specific approach, we can help you reinvent your business model and accomplish sophisticated heights of performance, keeping in mind the specific challenges that come your way. Our custom CRM showcases a composite blend of features under each vital area – Sales, Service, Marketing, and satisfaction.
+        </p>
+        <p>
+            Our CRM development services offer a mobility solution that caters to the business needs of the field sales teams, and area and regional managers. The back-office application caters to the needs of the administrators, Regional and Zonal heads, Company Distributors, and dealers.
+        </p>
+    </div>
+
+    <div class="discover">
+        <h2>
+            Discover How Our Enterprise CRM Can Maximize Your RoI
+        </h2>
+        <div class="discover-cont">
+            <div class="div">
+                <img src="{{ url_for('static', filename='bs_sol/mod12.png') }}" alt="">
+                <p>Marketing</p>
+            </div>
+            <div class="div">
+                <img src="{{ url_for('static', filename='bs_sol/mod11.png') }}" alt="">
+                <p>Sales</p>
+            </div>
+            <div class="div">
+                <img src="{{ url_for('static', filename='bs_sol/mod10.png') }}" alt="">
+                <p>Fleet</p>
+            </div>
+            <div class="div">
+                <img src="{{ url_for('static', filename='bs_sol/mod9.png') }}" alt="">
+                <p>Sales Dashboard</p>
+            </div>
+            <div class="div">
+                <img src="{{ url_for('static', filename='bs_sol/route.png') }}" alt="">
+                <p>Route</p>
+            </div>
+            <div class="div">
+                <img src="{{ url_for('static', filename='bs_sol/spot-billing.png') }}" alt="">
+                <p>Spot Billing</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="discover">
+        <h2>
+            Modules of Our Enterprise CRM
+        </h2>
+
+        <div class="discover-cont">
+            <div class="div">
+                <img src="{{ url_for('static', filename='bs_sol/mod12.png') }}" alt="">
+                <p>
+                    Competition Check & Tracking
+                </p>
+            </div>
+            <div class="div">
+                <img src="{{ url_for('static', filename='bs_sol/mod11.png') }}" alt="">
+                <p>
+                    Credit Balance & Transaction History
+                </p>
+            </div>
+            <div class="div">
+                <img src="{{ url_for('static', filename='bs_sol/mod10.png') }}" alt="">
+                <p>
+                    Signed Transactions
+                </p>
+            </div>
+            <div class="div">
+                <img src="{{ url_for('static', filename='bs_sol/mod9.png') }}" alt="">
+                <p>
+                    Route Planning, Feedback & Survey
+                </p>
+            </div>
+            <div class="div">
+                <img src="{{ url_for('static', filename='bs_sol/view-brodcast-message.png') }}" alt="">
+                <p>
+                    View Broadcast Messages
+                </p>
+            </div>
+            <div class="div">
+                <img src="{{ url_for('static', filename='bs_sol/reward-schemes-promotions.png') }}" alt="">
+                <p>
+                    Reward Schemes & Promotions
+                </p>
+            </div>
+            <div class="div">
+                <img src="{{ url_for('static', filename='bs_sol/app-extension-to-dealers.png') }}" alt="">
+                <p>
+                    App Extension to Dealers
+                </p>
+            </div>
+            <div class="div">
+                <img src="{{ url_for('static', filename='bs_sol/manage-served-unserved-clients.png') }}" alt="">
+                <p>
+                    Manage Served & Unserved Clients
+                </p>
+            </div>
+            <div class="div">
+                <img src="{{ url_for('static', filename='bs_sol/mod4.png') }}" alt="">
+                <p>
+                    Spot Billing
+                </p>
+            </div>
+            <div class="div">
+                <img src="{{ url_for('static', filename='bs_sol/mod3.png') }}" alt="">
+                <p>
+                    Campaign Management
+                </p>
+            </div>
+            <div class="div">
+                <img src="{{ url_for('static', filename='bs_sol/mod2.png') }}" alt="">
+                <p>
+                    Sales Dashboards
+                </p>
+            </div>
+            <div class="div">
+                <img src="{{ url_for('static', filename='bs_sol/mod1.png') }}" alt="">
+                <p>
+                    Fleet Monitoring
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="bs-benefits">
+        <h2>
+            Benefits Of ERP System
+        </h2>
+        <ul>
+            <li>
+                Calculable savings upto 50% on sales preparation and administrative time
+            </li>
+            <li>
+                Better decision making, elimination of redundant activities
+            </li>
+            <li>
+                Enhanced customer satisfaction
+            </li>
+            <li>
+                Maximize RoI in just 4 months
+            </li>
+            <li>
+                Data synchronization with GPRS ⁄ EDGE ⁄ 3G ⁄ WiFi
+            </li>
+            <li>
+                Support for third-party integration to legacy back-office ERPs (Tally, SAP, Navision, Oracle Applications, Microsoft Dynamics Ax)
+            </li>
+        </ul>
+    </div>
+
+    <!--Ind we serve-->
+    <div class="services-ind">
+        <h2>
+            Industries We Serve
+        </h2>
+        <div class="ind-cont">
+            <div class="contents">
+                <a href="{{ url_for('fitness') }}">
+                    <img src="{{ url_for('static', filename='industries/fitness.png') }}">
+                    <h5>
+                        Fitness
+                    </h5>
+                </a>
+            </div>
+            <div class="contents">
+                <a href="{{ url_for('fintech') }}">
+                    <img src="{{ url_for('static', filename='industries/fintech.png') }}">
+                    <h5>
+                        Fintech
+                    </h5>
+                </a>
+            </div>
+            <div class="contents">
+                <a href="{{ url_for('education') }}">
+                    <img src="{{ url_for('static', filename='industries/education.png') }}">
+                    <h5>
+                        Education
+                    </h5>
+                </a>
+            </div>
+            <div class="contents">
+                <a href="{{ url_for('healthcare') }}">
+                    <img src="{{ url_for('static', filename='industries/healthcareicon.png') }}">
+                    <h5>
+                        Healthcare
+                    </h5>
+                </a>
+            </div>
+            <div class="contents">
+                <a href="{{ url_for('energy') }}">
+                    <img src="{{ url_for('static', filename='industries/energy-and-utilities.png') }}">
+                    <h5>
+                        Energy & Utilities
+                    </h5>
+                </a>
+            </div>
+            <div class="contents">
+                <a href="{{ url_for('travel') }}">
+                    <img src="{{ url_for('static', filename='industries/travel-and-hospitality.png') }}">
+                    <h5>
+                        Travel & Hospitality
+                    </h5>
+                </a>
+            </div>
+            <div class="contents">
+                <a href="{{ url_for('manufacturing') }}">
+                    <img src="{{ url_for('static', filename='industries/manufacturing.png') }}">
+                    <h5>
+                        Manufacturing
+                    </h5>
+                </a>
+            </div>
+            <div class="contents">
+                <a href="{{ url_for('adverts') }}">
+                    <img src="{{ url_for('static', filename='industries/advertising.png') }}">
+                    <h5>
+                        Advertising
+                    </h5>
+                </a>
+            </div>
+            <div class="contents">
+                <a href="{{ url_for('retail') }}">
+                    <img src="{{ url_for('static', filename='industries/retail.png') }}">
+                    <h5>
+                        Retail
+                    </h5>
+                </a>
+            </div>
+            <div class="contents">
+                <a href="{{ url_for('entertain') }}">
+                    <img src="{{ url_for('static', filename='industries/media-and-entertainment.png') }}">
+                        <h5>
+                            Media & Entertainment
+                        </h5>
+                    </a>
+            </div>
+
+            <div class="contents">
+                <a href="{{ url_for('supplychain') }}">
+                    <img src="{{ url_for('static', filename='industries/logistics.png') }}">
+                    <h5>
+                        Supply Chain And Logistics
+                    </h5>
+                </a>
+            </div>
+            <div class="contents">
+                <a href="{{ url_for('travel') }}">
+                    <img src="{{ url_for('static', filename='industries/life-sciences.png') }}" alt="">
+                    <h5>
+                        Life Science
+                    </h5>
+                </a>
+            </div>  
+        </div>
+    </div>
+    <div class="services-contact bs_s">
+        <img src="{{ url_for('static', filename='services/Project_With_Us_graphic.png') }}" alt="">
+        <h2>Contact Us</h2>
+        <p>
+            Fill in this form and we will be with you within 24 hours
+        </p>
+        <a href="{{ url_for('contact') }}">
+            <button>
+                Contact Us
+            </button>
+        </a>
+    </div>
+    
+</main>
+{% endblock %}

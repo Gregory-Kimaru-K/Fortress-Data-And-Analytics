@@ -1,0 +1,228 @@
+{% extends 'base.html' %}
+{% block content %}
+<main class="bs">
+    <div class="bs-intro">
+        <div class="bs-intro-cont">
+            <h1>
+                Enterprise Service & Maintenance Solution
+            </h1>
+            <p>
+                Ensure Service Level Compliance and Utmost Customer Satisfaction with Effective Service and Maintenance.
+            </p>
+            <a href="{{ url_for('contact') }}">
+                <button>
+                    Request a Demo
+                </button>
+            </a>
+        </div>
+        <img src="{{ url_for('static', filename='landing/maintain.png') }}" alt="">
+    </div>
+
+    <div class="something">
+        <h2>
+            Service & Maintenance Application
+        </h2>
+        <p>
+            Fortress Data And Analytics' comprehensive solution, ‘Enterprise Service and Maintenance Solution– eSAM’, is an application to carry out Field Service and Maintenance activities like Service Call Assignments, Service Call Logging, Scheduled Maintenance, Call based Servicing, Site Survey, Equipment Health Data Capture and Collection, for In-premises installations and facilities, Manufacturing units, Large Production setups, Engineering industries, Hospitals, Hotels etc. It is of most use to the field maintenance staff and the field service engineering teams. Providing clients with valuable and competent service and maintenance as per defined Standard Operating Procedures (SOP) or as per companies’ standardized compliance is the USP of eSAM.
+        </p> 
+    
+    </div>
+
+   <div class="bs-benefits">
+        <h2>
+            How does eSAM ensure Service Level Compliance and Maximized RoI?
+        </h2>
+        <ul>
+            <li>Real time Access to Information</li>
+            <li>Reduced Job Completion Cycle</li>
+            <li>Increases field performance by 40%</li>
+            <li>Eliminate redundancy, paperwork and scheduling time benefiting to save 30% time from administrative tasks and logistics</li>
+            <li>Increase service lead capturing</li>
+            <li>Third party integration with legacy systems and ERP</li>
+        </ul>
+   </div>
+    
+   <div class="bs-benefits maintain">
+    <h2>
+        Benefits Of ERP System
+    </h2>
+    <ul>
+        <li>
+            Uniform user-friendly interfaces for web portals and mobile applications
+        </li>
+        <li>
+            Maximum features and reports of all modules available on the mobile app
+        </li>
+        <li>
+            Highly secured login methods (pin, fingerprint, OTP, face detection)
+        </li>
+        <li>
+            Geo-fencing to restrict the work area and restricted access based on user location/device/sim ID
+        </li>
+        <li>
+            Intelligent reports for top-level management for forecasting, budgeting & planning
+        </li>
+        <li>
+            Custom report builder to get interactive reports in various formats (table/chart etc. as per requirements)
+        </li>
+    </ul>
+   </div>
+   
+
+    <h2>
+        eSAM - The Process Flow
+    </h2>
+
+    <p>
+        Display customer data & service call details on mobile device
+    </p>
+
+    <p>
+        View today’s visit planning
+    </p>
+
+    <p>
+        View visit sequence on map as per visit plan
+    </p>
+
+    <p>
+        Select customer, view call details and perform necessary servicing
+    </p>
+
+    <p>
+        Re-assign call to another engineer / reschedule visit for various possible reasons
+    </p>
+
+    <p>
+        Update visit summary and call completion status (pending, done, etc.)
+    </p>
+
+    <p>
+        Take customer’s signature and feedback on visit completion
+    </p>
+
+    <p>
+        Back office data synchronization on continuous basis or in batch
+    </p>
+
+    <!--Ind we serve-->
+    <div class="services-ind">
+        <h2>
+            Industries We Serve
+        </h2>
+        <div class="ind-cont">
+            <div class="contents">
+                <a href="{{ url_for('fitness') }}">
+                    <img src="{{ url_for('static', filename='industries/fitness.png') }}">
+                    <h5>
+                        Fitness
+                    </h5>
+                </a>
+            </div>
+            <div class="contents">
+                <a href="{{ url_for('fintech') }}">
+                    <img src="{{ url_for('static', filename='industries/fintech.png') }}">
+                    <h5>
+                        Fintech
+                    </h5>
+                </a>
+            </div>
+            <div class="contents">
+                <a href="{{ url_for('education') }}">
+                    <img src="{{ url_for('static', filename='industries/education.png') }}">
+                    <h5>
+                        Education
+                    </h5>
+                </a>
+            </div>
+            <div class="contents">
+                <a href="{{ url_for('healthcare') }}">
+                    <img src="{{ url_for('static', filename='industries/healthcareicon.png') }}">
+                    <h5>
+                        Healthcare
+                    </h5>
+                </a>
+            </div>
+            <div class="contents">
+                <a href="{{ url_for('energy') }}">
+                    <img src="{{ url_for('static', filename='industries/energy-and-utilities.png') }}">
+                    <h5>
+                        Energy & Utilities
+                    </h5>
+                </a>
+            </div>
+            <div class="contents">
+                <a href="{{ url_for('travel') }}">
+                    <img src="{{ url_for('static', filename='industries/travel-and-hospitality.png') }}">
+                    <h5>
+                        Travel & Hospitality
+                    </h5>
+                </a>
+            </div>
+            <div class="contents">
+                <a href="{{ url_for('manufacturing') }}">
+                    <img src="{{ url_for('static', filename='industries/manufacturing.png') }}">
+                    <h5>
+                        Manufacturing
+                    </h5>
+                </a>
+            </div>
+            <div class="contents">
+                <a href="{{ url_for('adverts') }}">
+                    <img src="{{ url_for('static', filename='industries/advertising.png') }}">
+                    <h5>
+                        Advertising
+                    </h5>
+                </a>
+            </div>
+            <div class="contents">
+                <a href="{{ url_for('retail') }}">
+                    <img src="{{ url_for('static', filename='industries/retail.png') }}">
+                    <h5>
+                        Retail
+                    </h5>
+                </a>
+            </div>
+            <div class="contents">
+                <a href="{{ url_for('entertain') }}">
+                    <img src="{{ url_for('static', filename='industries/media-and-entertainment.png') }}">
+                        <h5>
+                            Media & Entertainment
+                        </h5>
+                    </a>
+            </div>
+
+            <div class="contents">
+                <a href="{{ url_for('supplychain') }}">
+                    <img src="{{ url_for('static', filename='industries/logistics.png') }}">
+                    <h5>
+                        Supply Chain And Logistics
+                    </h5>
+                </a>
+            </div>
+            <div class="contents">
+                <a href="{{ url_for('travel') }}">
+                    <img src="{{ url_for('static', filename='industries/life-sciences.png') }}" alt="">
+                    <h5>
+                        Life Science
+                    </h5>
+                </a>
+            </div>  
+        </div>
+    </div>
+
+    <div class="services-contact">
+        <img src="{{ url_for('static', filename='services/Project_With_Us_graphic.png') }}" alt="">
+        <h2>Contact Us</h2>
+        <p>
+            Fill in this form and we will be with you within 24 hours
+        </p>
+        <a href="{{ url_for('contact') }}">
+            <button>
+                Contact Us
+            </button>
+        </a>
+    </div>
+    
+</main>
+{% endblock %}

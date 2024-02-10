@@ -1,0 +1,158 @@
+{% extends "base.html" %}
+{% block content %}
+<main class="main-services">
+    <div class="services-intro">
+        <h1>
+            Hire Software Tester
+        </h1>
+        <div class="flexing">
+            <div class="flex-intro">
+                <p>
+                    As one of the principal testing organizations in India, our dedicated and skilled testers and QA engineers are committed to offering the best testing services, coupled with controlled cost runs, minimal rework time, and balanced evaluation of the solutions with a perfect blend of manual and automated testing.
+                </p>
+                <a href="{{ url_for('contact') }}">
+                    <button class="intro-btn">
+                        Hire QA Engineers
+                    </button>
+                </a>
+            </div>
+            <div class="intro-img">
+                <img src="{{ url_for('static', filename='landing/tester.png') }}" />
+            </div>
+        </div>
+    </div>
+    
+   <div class="services-content">
+        <div class="intro-cont">
+                <h2>
+                    Steps to Hire Dedicated Developers from Fortress Data And Analytics
+                </h2>
+        </div>
+        <div class="main-cont">
+            <div class="contents left">
+                <h3>
+                    <img src="{{ url_for('static', filename='services/hire_1.png') }}" alt="">
+                    Post Your Inquiry
+                </h3>
+
+            </div>
+            <div class="contents right">
+                <h3>
+                    <img src="{{ url_for('static', filename='services/hire_4.png') }}" alt="">
+     
+                    Interview
+                </h3>
+            </div>
+            <div class="contents left">
+                <h3>
+                    <img src="{{ url_for('static', filename='services/hire_3.png') }}" alt="">
+
+                    Engagement Terms
+                </h3>
+            </div>
+            <div class="contents right">
+                <h3>
+                    <img src="{{ url_for('static', filename='services/hire_2.png') }}" alt="">
+
+                    Get Started
+                </h3>
+            </div>
+        </div>
+   </div>
+
+    <div class="services-contact">
+        <img src="{{ url_for('static', filename='services/Project_With_Us_graphic.png') }}" alt="">
+        <h2>
+            Hire a QA Engineers
+        </h2>
+        <p>
+            Our software testers work towards a single objective – ‘attaining customer satisfaction' along with minimal cost overhead and increased ability. Our testing teams assure you of unparalleled software that matches all your requirements and performs to its best, with full-on quality and performance standards.
+        </p>
+        <a href="{{ url_for('contact') }}">
+            <button>
+                Hire QA Engineers
+            </button>  
+        </a>  
+    </div>
+
+    <div class="services-ind">
+        <h2>
+            Solutions for Industries
+        </h2>
+        <div class="ind-cont">
+            <div class="contents">
+                <img src="{{ url_for('static', filename='industries/fitness.png') }}">
+                <h5>
+                    Fitness
+                </h5>
+            </div>
+            <div class="contents">
+                <img src="{{ url_for('static', filename='industries/fintech.png') }}">
+                <h5>
+                    Fintech
+                </h5>
+            </div>
+            <div class="contents">
+                <img src="{{ url_for('static', filename='industries/education.png') }}">
+                <h5>
+                    Education
+                </h5>
+            </div>
+            <div class="contents">
+                <img src="{{ url_for('static', filename='industries/healthcareicon.png') }}">
+                <h5>
+                    Healthcare
+                </h5>
+            </div>
+            <div class="contents">
+                <img src="{{ url_for('static', filename='industries/energy-and-utilities.png') }}">
+                <h5>
+                    Energy & Utilities
+                </h5>
+            </div>
+            <div class="contents">
+                <img src="{{ url_for('static', filename='industries/travel-and-hospitality.png') }}">
+                <h5>
+                    Travel & Hospitality
+                </h5>
+            </div>
+            <div class="contents">
+                <img src="{{ url_for('static', filename='industries/manufacturing.png') }}">
+                <h5>
+                    Manufacturing
+                </h5>
+            </div>
+            <div class="contents">
+                <img src="{{ url_for('static', filename='industries/advertising.png') }}">
+                <h5>
+                    Advertising
+                </h5>
+            </div>
+            <div class="contents">
+                <img src="{{ url_for('static', filename='industries/retail.png') }}">
+                <h5>
+                    Retail
+                </h5>
+            </div>
+            <div class="contents">
+                <img src="{{ url_for('static', filename='industries/media-and-entertainment.png') }}">
+                <h5>
+                    Media & Entertainment
+                </h5>
+            </div>
+            <div class="contents">
+                <img src="{{ url_for('static', filename='industries/logistics.png') }}">
+                <h5>
+                    Supply Chain And Logistics
+                </h5>
+            </div>
+            <div class="contents">
+                <img src="{{ url_for('static', filename='industries/life-sciences.png') }}" alt="">
+                <h5>
+                    Life Science
+                </h5>
+            </div>      
+        </div>
+    </div>
+</main>
+{% endblock %}
