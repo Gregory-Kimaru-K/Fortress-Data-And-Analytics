@@ -1,54 +1,63 @@
-<!-- HTML -->
+<!DOCTYPE html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Parallax Effect</title>
   <style>
-    /* Define custom properties for light and dark themes */
-    :root {
-      --bg-color: white;
-      --text-color: black;
-    }
-
-    .dark-mode {
-      --bg-color: black;
-      --text-color: white;
-    }
-
-    /* Apply custom properties to the body element */
     body {
-      background-color: var(--bg-color);
-      color: var(--text-color);
+      margin: 0;
+      padding: 0;
     }
 
-    /* Add a button to switch between themes */
-    button {
-      position: fixed;
-      top: 10px;
-      right: 10px;
+    .container {
+      position: relative;
+      height: 2000px; /* Adjust height as needed */
+    }
+
+    .overlap {
+      width: 200px;
+      height: 100px;
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white;
+      text-align: center;
+      line-height: 100px;
+      transition: transform 0.5s ease-out; /* Add smooth transition for the parallax effect */
+    }
+
+    #div1 {
+      position: relative;
+      left: 50%;
+      width: 100%;
+      height: 50%;
+      transform: translateX(-50%);
+    }
+
+    #div2 {
+      position: relative;
+      left: 50%;
+      width: 100%;
+      height: 50%;
+      transform: translate(-50%, 0); /* Initial transform */
     }
   </style>
 </head>
 <body>
-  <h1>Hello, world!</h1>
-  <p>This is a simple website with dark mode.</p>
-  <!-- Use an emoji as the button content -->
-  <button id="theme-toggle">🌙</button>
+  <div class="container">
+    <div class="overlap" id="div1">Div 1</div>
+    <div class="overlap" id="div2">Div 2</div>
+  </div>
   <script>
-    // JavaScript
-    // Get the button element
-    const themeToggle = document.getElementById("theme-toggle");
+    window.addEventListener('scroll', function() {
+      var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      var div1 = document.getElementById('div1');
+      var div2 = document.getElementById('div2');
+      var speed = 0.3; // Adjust the speed of the parallax effect
 
-    // Add a click event listener to the button
-    themeToggle.addEventListener("click", () => {
-      // Get the current value of the button
-      const currentTheme = themeToggle.textContent;
-
-      // Toggle the theme and the button content
-      if (currentTheme === "🌙") {
-        document.body.classList.add("dark-mode");
-        themeToggle.textContent = "☀️";
-      } else {
-        document.body.classList.remove("dark-mode");
-        themeToggle.textContent = "🌙";
-      }
+      // Calculate the new position of div2 based on the scroll position
+      var newPosition = -scrollTop * speed;
+      div2.style.transform = 'translate(-50%, ' + newPosition + 'px)';
     });
   </script>
 </body>
+</html>

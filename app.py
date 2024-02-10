@@ -129,19 +129,120 @@ def mobile():
 def trending():
     return render_template("tech/trending.html")
 
-@app.route('/sending', methods = ["POST", "GET"])
-def sending():
-    if request.method == 'POST':
-        customer_name = request.form.get('customer_name')
-        email = request.form.get('email')
-        customer_contact = request.form.get('customer_contact')
-        topic = request.form.get('topic')
-        brief = request.form.get('brief')
+#industry endpoints
+@app.route("/ind/fintech")
+def fintech():
+    return render_template("ind/fintech.html")
 
-        new_client = Client(name=customer_name, tel_no=customer_contact, email=email, reason=topic, description=brief)
+@app.route("/ind/retail")
+def retail():
+    return render_template("ind/retail.html")
 
-        db.session.add(new_client)
-        db.session.commit()
+@app.route("/ind/manufacturing")
+def manufacturing():
+    return render_template("ind/manufacturing.html")
+
+@app.route("/ind/healthcare")
+def healthcare():
+    return render_template("ind/healthcare.html")
+
+@app.route("/ind/supplychain")
+def supplychain():
+    return render_template("ind/supplychain.html")
+
+@app.route("/ind/education")
+def education():
+    return render_template("ind/education.html")
+
+@app.route("/ind/energy")
+def energy():
+    return render_template("ind/energy.html")
+
+@app.route("/ind/adverts")
+def adverts():
+    return render_template("ind/adverts.html")
+
+@app.route("/ind/fitness")
+def fitness():
+    return render_template("ind/fitness.html")
+
+@app.route("/ind/travel")
+def travel():
+    return render_template("ind/travel.html")
+
+@app.route("/ind/entertain")
+def entertain():
+    return render_template("ind/entertain.html")
+
+# bs sol
+@app.route('/bs_sol/ERP')
+def erp():
+    return render_template("bs/erp.html")
+
+@app.route('/bs_sol/crm')
+def crm():
+    return render_template("bs/crm.html")
+
+@app.route('/bs_sol/maintain')
+def maintain():
+    return render_template("bs/maintain.html")
+
+
+@app.route('/bs_sol/sfa')
+def sfa():
+    return render_template("bs/sfa.html")
+
+# hire
+
+@app.route('/talent/dev')
+def dev():
+    return render_template("hire/dev.html")
+
+
+@app.route('/talent/bidev')
+def bidev():
+    return render_template("hire/bidev.html")
+
+
+@app.route('/talent/ui')
+def ui():
+    return render_template("hire/ui.html")
+
+
+@app.route('/talent/tester')
+def tester():
+    return render_template("hire/tester.html")
+
+
+@app.route('/talent/back')
+def back():
+    return render_template("hire/back.html")
+
+
+@app.route('/talent/mobiledev')
+def mobiledev():
+    return render_template("hire/mobile.html")
+
+
+@app.route('/talent/full')
+def full():
+    return render_template("hire/full.html")
+
+
+
+# @app.route('/sending', methods = ["POST", "GET"])
+# def sending():
+#     if request.method == 'POST':
+#         customer_name = request.form.get('customer_name')
+#         email = request.form.get('email')
+#         customer_contact = request.form.get('customer_contact')
+#         topic = request.form.get('topic')
+#         brief = request.form.get('brief')
+
+#         new_client = Client(name=customer_name, tel_no=customer_contact, email=email, reason=topic, description=brief)
+
+#         db.session.add(new_client)
+#         db.session.commit()
 
         # whatsapp_message = f'New client: {customer_name}\nEmail: {email}\nContact: {customer_contact}\nTopic: {topic}\nBrief: {brief}'
         # try:
@@ -154,10 +255,10 @@ def sending():
         # except Exception as e:
         #     print("Error sending WhatsApp message:", str(e))
 
-        return redirect(request.referrer)
+        # return redirect(request.referrer)
   
 
 if __name__ == '__main__':
     with app.app_context():  
         db.create_all()
-    app.run(debug=True)
+    app.run(debug=False)
