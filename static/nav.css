@@ -49,12 +49,12 @@
     position: relative;
 }
 
-.dropdown-serv .dropbtn:hover,
-.dropdown-abt .dropbtn:hover,
-.dropdown-tech .dropbtn:hover,
-.dropdown-ind .dropbtn:hover,
-.dropdown-sol .dropbtn:hover,
-.dropdown-hire .dropbtn:hover {
+.dropdown-serv .dropbtn:active,
+.dropdown-abt .dropbtn:active,
+.dropdown-tech .dropbtn:active,
+.dropdown-ind .dropbtn:active,
+.dropdown-sol .dropbtn:active,
+.dropdown-hire .dropbtn:active {
     transform: scale(1.1);
     color: aqua;
 }
