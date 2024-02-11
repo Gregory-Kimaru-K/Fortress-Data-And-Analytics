@@ -102,6 +102,7 @@
 .dropdown-sol .dropdown-sol-content a,
 .dropdown-hire .dropdown-hire-content a {
     color: #fff;
+    background: transparent;
     padding: 10px;
     text-decoration: none;
     display: block;
@@ -174,6 +175,17 @@
 .logo {
     margin-left: 2%;
     margin-top: 1%;
+    display: flex;
+}
+
+.logo h5 {
+    font-optical-sizing: auto;
+    font-size: 20px;
+    padding-top: 0.5%;
+    padding-left: 1%;
+    font-weight: 400;
+    font-family: "Caveat", cursive;
+
 }
 
 .logo a img {
@@ -220,7 +232,7 @@ span #dark-mode-icon {
     .navbar .dropdown-ind,
     .navbar .dropdown-sol,
     .navbar .dropdown-hire {
-        background-color: #00b7eb;
+        background-color: #00b7eb; /*008b8b*/
         padding: 15px;
         text-decoration: none;
         color: white;
@@ -239,17 +251,23 @@ span #dark-mode-icon {
     .dropdown-serv .dropdown-serv-content,
     .dropdown-abt .dropdown-abt-content,
     .dropdown-tech .dropdown-tech-content,
+    .dropdown-ind .dropdown-ind-content,
     .dropdown-sol .dropdown-sol-content,
     .dropdown-hire .dropdown-hire-content {
         display: none;
-        background-color: #00b7eb;
+        position: relative;
+        background-color: #00ced1;
         box-sizing: border-box;
-        width: 700px;
+        width: 100vw;
+        padding-top: 5%;
+        left: 0;
+        padding-bottom: 5%;
     }
 
     .dropdown-serv .dropdown-serv-content a,
     .dropdown-abt .dropdown-abt-content a,
     .dropdown-tech .dropdown-abt-content a,
+    .dropdown-ind .dropdown-ind-content a,
     .dropdown-sol .dropdown-sol-content a,
     .dropdown-hire .dropdown-hire-content a {
         width: 100%;
@@ -258,6 +276,20 @@ span #dark-mode-icon {
 
     .header .mobile-menu {
         display: block;
+        transition: transform 1s;
+    }
+    .header .mobile-menu .mobile-menu-icon.active:nth-child(2) {
+        transform: rotate(45deg);
+    }
+
+    .mobile-menu-icon.active:nth-child(1) {
+        transform: rotate(-45deg);
+        position: relative;
+        top: 1.1%;
+    }
+
+    .mobile-menu-icon.active:nth-child(3) {
+        display: none;
     }
 
     .header .navbar.show {
@@ -282,38 +314,9 @@ span #dark-mode-icon {
     .dropdown-serv:active .dropdown-serv-content,
     .dropdown-abt:active .dropdown-abt-content,
     .dropdown-tech:active .dropdown-tech-content,
+    .dropdown-ind:active .dropdown-ind-content,
     .dropdown-sol:active .dropdown-sol-content,
     .dropdown-hire:active .dropdown-hire-content {
             display: block;
-    }
-
-    .dropdown-serv .dropdown-serv-content {
-        left: -280%;
-        padding-bottom: 50%;
-    }
-
-    .dropdown-abt .dropdown-abt-content {
-        left: -350%;
-        padding-bottom: 50%;
-    }
-
-    .dropdown-tech .dropdown-tech-content {
-        left: -200%;
-        padding-bottom: 50%;
-    }
-
-    .dropdown-ind .dropdown-ind-content {
-        left: -80%;
-        padding-bottom: 50%;
-    }
-
-    .dropdown-sol .dropdown-sol-content {
-        left: -150%;
-        padding-bottom: 50%;
-    }
-
-    .dropdown-hire .dropdown-hire-content {
-        left: -250%;
-        padding-bottom: 50%;
     }
 }

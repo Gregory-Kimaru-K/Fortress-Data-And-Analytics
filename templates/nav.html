@@ -7,11 +7,15 @@
     <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='nav.css')}}" >
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap" rel="stylesheet">
 </head>
 <body class="nav-body">
     <header class="header">
         <div class="logo">
             <a href="{{ url_for('home') }}"><img src="{{ url_for('static', filename='fortress2.png') }}"></a>
+            <h5>Fortress Data And Analytics</h5>
         </div>
         <nav class="navbar">
             <a class="home-nav" href="{{ url_for('home')}}">Home</a>
@@ -92,21 +96,43 @@
         <!-- <button id="theme-toggle">🌙</button> -->
 
         <div class="mobile-menu">
-            <div></div>
-            <div></div>
-            <div></div>
+            <div class="mobile-menu-icon"></div>
+            <div class="mobile-menu-icon"></div>
+            <div class="mobile-menu-icon"></div>
         </div> 
     </header>
     <script src="{{ url_for('static', filename='main.js') }}"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
-            const mobileMenuBtn = document.querySelector('.mobile-menu');
-            const navbar = document.querySelector('.navbar');
+        const mobileMenuBtn = document.querySelector('.mobile-menu');
+        const navbar = document.querySelector('.navbar');
+        const dropbtns = document.querySelectorAll('.dropbtn');
+        const dropdownContents = document.querySelectorAll('.dropdown-content');
+        const mobileMenuIcons = document.querySelectorAll('.mobile-menu-icon');
 
-            mobileMenuBtn.addEventListener('click', function () {
-                navbar.classList.toggle('show');
+        mobileMenuBtn.addEventListener('click', function () {
+            navbar.classList.toggle('show');
+            // Toggle the mobile menu icon
+            mobileMenuIcons.forEach(icon => {
+                icon.classList.toggle('active');
             });
         });
+
+        dropbtns.forEach(dropbtn => {
+            dropbtn.addEventListener('click', function () {
+                const dropdownContent = this.nextElementSibling;
+                dropdownContents.forEach(content => {
+                    if (content !== dropdownContent) {
+                        content.classList.remove('active');
+                    }
+                });
+                dropdownContent.classList.toggle('active');
+            });
+        });
+        });
+
     </script>
+</body>
+</html>
 </body>
 </html>
