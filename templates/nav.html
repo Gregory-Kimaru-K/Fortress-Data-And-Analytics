@@ -94,7 +94,6 @@
         </nav>
 
         <!-- <button id="theme-toggle">🌙</button> -->
-
         <div class="mobile-menu">
             <div class="mobile-menu-icon"></div>
             <div class="mobile-menu-icon"></div>
@@ -132,7 +131,35 @@
         });
 
     </script>
+    
 </body>
 </html>
 </body>
 </html>
+
+<!--
+    .header .mobile-menu {
+        position: absolute;
+        z-index: 2000;
+        right: 0;
+        display: block;
+        transition: transform 1s;
+    }
+    .header .mobile-menu .mobile-menu-icon.active:nth-child(2) {
+        transform: rotate(45deg);
+    }
+
+    .mobile-menu:hover .mobile-menu-icon.active:nth-child(1) {
+        transform: translate(45deg);
+    }
+
+    .mobile-menu-icon.active:nth-child(1) {
+        transform: rotate(-45deg);
+        position: relative;
+        top: 8px;
+    }
+
+    .mobile-menu-icon.active:nth-child(3) {
+        display: none;
+    }
+-->
