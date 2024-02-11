@@ -548,7 +548,7 @@ a {
     left: 90%;
     bottom: 3%;
     cursor: pointer;
-    z-index: 5;
+    z-index: 10;
 }
 
 .message-icon img {
@@ -575,7 +575,7 @@ a {
     max-height: 100%;
     background: blueviolet;
     padding: 20px;
-    z-index: 5;
+    z-index: 11;
     transition: opacity 1s ease-in-out;
 }
 
