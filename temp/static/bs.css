@@ -1,8 +1,27 @@
+.bs {
+    color: #fff;
+}
 .bs .bs-intro {
     padding-top: 10%;
     text-align: center;
     display: flex;
     justify-content: space-between;
+    background: transparent;
+}
+
+.bs .bs-intro::before {
+    content: "";
+    position: absolute;
+    top: 30%;
+    left: 30%;
+    width: 70%;
+    height: 50%;
+    background-image: linear-gradient(45deg,#eae0c8, var(--curosel-before));
+    background-size: 500%;
+    transition: 1s;
+    filter: blur(150px);
+    z-index: -1;
+    animation: techanime 15s ease-in-out infinite alternate;
 }
 
 .bs .bs-intro .bs-intro-cont {
@@ -17,13 +36,14 @@
     height: 40px;
     border-radius: 10px;
     background-color: color-mix(in srgb, white 20%, blue 30%);
+    color: #fff;
     transition: 1s;
 }
 
 .bs .bs-intro .bs-intro-cont a button:hover {
     transform: scale(1.1);
-    color: darkblue;
-    background-color: aquamarine;
+    color: #fff;
+    background-color: #4169e1;
 }
 
 .bs .bs-intro img {
@@ -54,18 +74,20 @@
 .bs .discover .discover-cont div {
     width: 400px;
     margin-left: 15%;
-    background: greenyellow;
+    background: #ffd700;
     border-radius: 100px;
+    color: #000;
     padding: 5%;
     margin-bottom: 5%;
     transition: 1s;
 }
 
 .bs .discover .discover-cont div:hover {
-    background-color: aqua;
-    box-shadow: 10px 10px 18px 2px rgba(0,0,0,0.75);
-    -webkit-box-shadow: 10px 10px 18px 2px rgba(0,0,0,0.75);
-    -moz-box-shadow: 10px 10px 18px 2px rgba(0,0,0,0.75);
+    background-color: #ffdf00;
+    transform: scale(1.1);
+    box-shadow: 10px 10px 32px 6px rgba(245,245,220, 0.6);
+    -webkit-box-shadow: 10px 10px 32px 6px rgba(245,245, 220, 0.6);
+    -moz-box-shadow: 10px 10px 32px 6px rgba(245,245,220, 0.6);
 
 }
 
@@ -90,16 +112,17 @@
     border-radius: 20px;
     height: 100%;
     padding: 2%;
-    background-color: blue;
-    color: beige;
+    background-color: #ffd700;
+    color: #000;
     margin-top: 10%;
     transition: 1s;
 }
 
 .bs-benefits ul li:hover {
-    box-shadow: 10px 10px 18px 2px rgba(0,0,0,0.75);
-    -webkit-box-shadow: 10px 10px 18px 2px rgba(0,0,0,0.75);
-    -moz-box-shadow: 10px 10px 18px 2px rgba(0,0,0,0.75);
+    transform: scale(1.1);
+    box-shadow: -3px 1px 183px 0px rgba(245,245,220,0.75);
+    -webkit-box-shadow: -3px 1px 183px 0px rgba(245,245,220,0.75);
+    -moz-box-shadow: -3px 1px 183px 0px rgba(245,245,220,0.75);
 }
 
 .assurance {
@@ -112,19 +135,19 @@
     height: 100%;
     width: 40%;
     margin-top: 10%;
-    background-color: aqua;
+    background-color: #ffd700;
     position: relative;
+    color: #000;
     left: 30%;
     border-radius: 50px;
     transition: 1s;
 }
 
 .assurance .assurance-cont .assure:hover {
-    background: blue;
-    color: aliceblue;
-    box-shadow: 10px 10px 18px 2px rgba(0,0,0,0.75);
-    -webkit-box-shadow: 10px 10px 18px 2px rgba(0,0,0,0.75);
-    -moz-box-shadow: 10px 10px 18px 2px rgba(0,0,0,0.75);
+    background: #ffcc00;
+    box-shadow: -3px 1px 183px 0px rgba(245,245,220,0.75);
+    -webkit-box-shadow: -3px 1px 183px 0px rgba(245,245,220,0.75);
+    -moz-box-shadow: -3px 1px 183px 0px rgba(245,245,220,0.75);
 }
 
 .assurance .assurance-cont .assure p {

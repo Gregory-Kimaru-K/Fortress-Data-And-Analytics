@@ -241,7 +241,7 @@ span #dark-mode-icon {
         min-width: 95vw;
         min-height: 100vh;
         display: none;
-        background-color: #00b7eb;
+        background-color: #000100;
         overflow-y: auto;
         transition-delay: 2s;
         padding-bottom: 30%;

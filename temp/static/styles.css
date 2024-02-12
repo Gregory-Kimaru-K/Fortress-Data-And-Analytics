@@ -123,6 +123,7 @@ a {
     font-weight: 300;
     font-size: 15px;
     margin-top: 5%;
+    z-index: 11;
 }
 
 .footer .services ul li,
@@ -201,6 +202,7 @@ a {
     background: #000036;
     color: #fff;
     font-weight: 300;
+    z-index: 11;
 }
 
 
@@ -566,7 +568,11 @@ a {
     left: 90%;
     bottom: 3%;
     cursor: pointer;
-    z-index: 10;
+    z-index: 18;
+}
+
+.message-icon img::before {
+    filter: blur(150px);
 }
 
 .message-icon img {
@@ -595,7 +601,7 @@ a {
     background: #000100;
     color: #fff;
     padding: 20px;
-    z-index: 11;
+    z-index: 31;
     transition: opacity 1s ease-in-out;
 }
 
@@ -664,7 +670,7 @@ a {
 
 .services-ind::before {
     content: "";
-    background-image: linear-gradient(45deg,#004242, #008b8b, #00ced1);
+    background-image: linear-gradient(45deg,#004242, #b8860b, #996515);
     background-attachment: fixed;
     background-size: 700%;
     width: 100%;
@@ -708,7 +714,7 @@ a {
     text-align: center;
     border: 2px solid black;
     border-radius: 20px;
-    background-color: aqua;
+    background-color: #ffcc00;
     transition: 1s;
 }
 
@@ -1162,7 +1168,7 @@ a {
 .about-team .about-list .ceo .team-content .get-started a button {
     width: 60%;
     height: 40px;
-    background: #004242;
+    background: #23297a;
     color: aliceblue;
     transition: 1s;
     border: none;
@@ -1173,7 +1179,7 @@ a {
 
 .about-team .about-list .ceo .team-content .get-started a button:hover {
     transform: scale(1.1);
-    background: #00ff00;
+    background: #4169e1;
     color: #000;
 }
 
@@ -1388,7 +1394,7 @@ a {
 }
 
 .bs-brief .bs-brief-cont .content:hover {
-    background: #000;
+    background: #967117;
     color: #fff;
     box-shadow: 10px 10px 32px 6px rgba(245,245,220, 0.3);
     -webkit-box-shadow: 10px 10px 32px 6px rgba(245,245, 220, 0.3);

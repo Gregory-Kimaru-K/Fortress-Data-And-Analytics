@@ -191,7 +191,6 @@ def sfa():
     return render_template("bs/sfa.html")
 
 # hire
-
 @app.route('/talent/dev')
 def dev():
     return render_template("hire/dev.html")
