@@ -2,9 +2,11 @@ from flask import Flask, render_template
 import secrets
 
 
+temmplate_folder = 'temp/templates'
+static_folder = 'temp/static'
 
 
-app = Flask(__name__)
+app = Flask(__name__, template_folder=temmplate_folder, static_folder=static_folder)
 
 # current_dir = os.path.abspath(os.path.dirname(__file__))
 # database_path = os.path.join(current_dir, 'data.db')
