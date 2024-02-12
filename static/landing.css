@@ -23,6 +23,9 @@
     --item5-filter: blur(20px);
     --item5-zindex: 4;
     --item5-opacity: 4;
+
+    --curosel-before: color-mix(in srgb, #9400d3 20%, #b78727);
+    --corosel-h1: color-mix(in srgb, green, yellow);
 }
 
 .carousel {
@@ -36,7 +39,7 @@
     margin-top: 6%;
     text-align: center;
     padding-bottom: 2%;
-    background: linear-gradient(45deg, black, green, yellow);
+    background: linear-gradient(45deg, var(--corosel-h1), yellow);
     -webkit-background-clip: text;
     color: transparent;
     transition: 1s;
@@ -67,7 +70,7 @@
 
 .carousel h2 {
     text-align: center;
-    background: linear-gradient(45deg, green, yellow);
+    background: linear-gradient(45deg, var(--corosel-h1), yellow);
     -webkit-background-clip: text;
     color: transparent;
 }
@@ -90,7 +93,7 @@
     width: 70%;
     height: 100%;
     font-size: 15px;
-    color: black;
+    color: #fff;
 }
 
 .carousel .list .item img {
@@ -189,8 +192,8 @@
 }
 
 .arrows #prev:hover, .arrows #next:hover {
-    background-color: aqua;
-    color: #000;
+    background-color: #00b7eb;
+    color: #fff;
 }
 
 .arrows #prev:active, .arrows #next:active {
@@ -218,7 +221,7 @@
 }
 
 .carousel .list .item .intro .title h2 {
-    color: #000;
+    color: #fff;
 }
 
 .carousel .list .intro .des {
@@ -241,14 +244,14 @@
 }
 .carousel .list .item:nth-child(2) .intro .seeMore button {
     width: 60%;
-    height: 50%;
+    height: 35px;
     border-radius: 20px;
     transition: .5s;
 }
 
 .carousel .list .item:nth-child(2) .intro .seeMore button:hover {
-    background-color: aqua;
-    font-size: 15px;
+    background-color: #00b7eb;
+    transform: scale(1.1);   
 }
 
 .carousel .list .item:nth-child(2) .intro .seeMore button:active {
@@ -511,20 +514,20 @@
 }
 
 .carousel::before {
-    width: 500px;
-    height: 300px;
+    width: 70%;
+    height: 70%;
     content: '';
-    background-image: linear-gradient(45deg, #000036, #560319);
+    background-image: linear-gradient(45deg, #eae0c8, var(--curosel-before));
     position: absolute;
     z-index: -1;
-    border-radius: 20% 30% 60% 30%;
+    border-radius: 40% 35% 10% 30%;
     filter: blur(150px);
-    top: 50%;
-    left: 50%;
+    top: 55%;
+    left: 30%;
     transform: translate(-10%, -50%);
     transition: 1s;
-    /* background-size: 500%; */
-    /* animation: carouselcolor 5s ease-in-out infinite alternate; */
+    background-size: 500%;
+    animation: carouselcolor 10s ease-in-out infinite alternate;
 }
 
 @keyframes carouselcolor {
@@ -537,7 +540,9 @@
 }
 
 .carousel.showDetail::before {
-    transform: translate(-100%, -50%) rotate(70deg);
+    transform: translate(-10%, -40%) rotate(70deg);
+    left: 0%;
+    top: 80%;
 }
 
 @media screen and (max-width: 991px) {
@@ -552,42 +557,50 @@
 }
 
 @media screen and (max-width: 767px) {
-        .carousel .list .item {
-            width: 100%;
-            font-size: 10px;
-        }
-        .carousel {
-            height: 800px;
-        }
-        .carousel .list {
-            height: 80%;
-        }
-        .carousel .list .item .intro {
-            width: 50%;
-            top: 30%;
-        }
+    .arrows #prev:hover, .arrows #next:hover {
+        background-color: #000;
+        color: #fff;
+    }
+    .arrows #prev:active, .arrows #next:active {
+        background-color: #002fa7;
+        color: #fff;
+    }
+    .carousel .list .item {
+        width: 100%;
+        font-size: 10px;
+    }
+    .carousel {
+        height: 800px;
+    }
+    .carousel .list {
+        height: 80%;
+    }
+    .carousel .list .item .intro {
+        width: 50%;
+        top: 30%;
+    }
 
-        .carousel .list .item img {
-            width: 40%;
-        }
+    .carousel .list .item img {
+        width: 40%;
+    }
 
-        .carousel.showDetail .list .detail {
-            top: 5%;
-            height: 80%;
-        }
+    .carousel.showDetail .list .detail {
+        top: 5%;
+        height: 80%;
+    }
 
-        .carousel .list .item .detail .title {
-            font-size: 20px;
-        }
+    .carousel .list .item .detail .title {
+        font-size: 20px;
+    }
 
-        .carousel .list .item .detail .des {
-            overflow: auto;
-            font-size: 12px;
-        }
-        .carousel .list .arrows {
-            position: absolute;
-            bottom: -10000px;
-            left: 50%;
-            transform: translateX(-50%);
-        }
+    .carousel .list .item .detail .des {
+        overflow: auto;
+        font-size: 12px;
+    }
+    .carousel .list .arrows {
+        position: absolute;
+        bottom: -10000px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
 }

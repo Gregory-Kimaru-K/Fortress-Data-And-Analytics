@@ -12,7 +12,7 @@
     position: fixed;
     width: 100%;
     max-width: 100%;
-    background-color: #00b7eb;
+    background-color: #000100;
     text-decoration: none;
     z-index: 20;
     justify-content: space-between;
@@ -37,7 +37,7 @@
 
 .navbar .home-nav:hover {
     font-size: 17px;
-    color: aqua;
+    color: #fcc200;
 }
 
 .dropdown-serv,
@@ -49,14 +49,14 @@
     position: relative;
 }
 
-.dropdown-serv .dropbtn:active,
-.dropdown-abt .dropbtn:active,
-.dropdown-tech .dropbtn:active,
-.dropdown-ind .dropbtn:active,
-.dropdown-sol .dropbtn:active,
-.dropdown-hire .dropbtn:active {
+.dropdown-serv .dropbtn:hover,
+.dropdown-abt .dropbtn:hover,
+.dropdown-tech .dropbtn:hover,
+.dropdown-ind .dropbtn:hover,
+.dropdown-sol .dropbtn:hover,
+.dropdown-hire .dropbtn:hover {
     transform: scale(1.1);
-    color: aqua;
+    color: #fcc200;
 }
 
 
@@ -87,7 +87,7 @@
 .dropdown-hire .dropdown-hire-content {
     display: none;
     position: absolute;
-    background-color: #00b7eb;
+    background-color: #000100;
     min-width: 50vw;
     max-height: 700px;
     overflow-y: auto;
@@ -115,7 +115,7 @@
 .dropdown-ind .dropdown-ind-content a:hover,
 .dropdown-sol .dropdown-sol-content a:hover,
 .dropdown-hire .dropdown-hire-content a:hover {
-    background-color: aqua;
+    background-color: #fcc200;
 }
 
 .dropdown-serv:hover .dropdown-serv-content,
@@ -182,6 +182,7 @@
     padding-top: 0.5%;
     padding-left: 1%;
     font-weight: 400;
+    color: #fff;
     font-family: "Caveat", cursive;
 
 }
